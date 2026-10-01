@@ -914,3 +914,244 @@ body.modal-open{
     width:100%;
   }
 }
+
+
+/* Request page */
+.request-intro{
+  min-height:260px;
+  margin-bottom:24px;
+  padding:44px 52px;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
+}
+.request-intro-copy{
+  max-width:850px;
+}
+.request-intro h1{
+  margin:0 0 18px;
+  font-size:clamp(34px,4.2vw,54px);
+  line-height:1.06;
+  color:#222;
+}
+.request-intro p{
+  margin:0;
+  font-size:18px;
+  line-height:1.62;
+  color:#555;
+}
+.request-card{
+  padding:44px 48px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
+}
+.request-form{
+  max-width:980px;
+  margin:0 auto;
+}
+.request-section-heading{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  margin-bottom:24px;
+}
+.request-section-heading>span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 42px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#2d2d2d;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+}
+.request-section-heading h2{
+  margin:0 0 5px;
+  font-size:24px;
+  line-height:1.2;
+  color:#222;
+}
+.request-section-heading p{
+  margin:0;
+  font-size:15px;
+  line-height:1.4;
+  color:#777;
+}
+.request-fields{
+  display:grid;
+  gap:18px;
+}
+.request-fields-two{
+  grid-template-columns:1fr 1fr;
+}
+.request-fields-address{
+  grid-template-columns:1fr 220px;
+  margin-top:18px;
+}
+.request-field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.request-field>span{
+  font-size:14px;
+  font-weight:700;
+  color:#444;
+}
+.request-field input,
+.request-field select,
+.request-field textarea{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:#fafafa;
+  color:#222;
+  font:inherit;
+  font-size:16px;
+  outline:none;
+  transition:border-color .2s ease,background .2s ease,box-shadow .2s ease;
+}
+.request-field input,
+.request-field select{
+  min-height:50px;
+  padding:12px 14px;
+}
+.request-field textarea{
+  min-height:130px;
+  padding:13px 14px;
+  resize:vertical;
+}
+.request-field input::placeholder,
+.request-field textarea::placeholder{
+  color:#aaa;
+}
+.request-field input:focus,
+.request-field select:focus,
+.request-field textarea:focus{
+  border-color:#777;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(0,0,0,.05);
+}
+.request-hint-box{
+  min-height:50px;
+  padding:12px 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-radius:10px;
+  background:#f4f4f4;
+}
+.request-hint-box strong{
+  margin-bottom:3px;
+  font-size:14px;
+  color:#444;
+}
+.request-hint-box span{
+  font-size:13px;
+  line-height:1.4;
+  color:#777;
+}
+.request-divider{
+  height:1px;
+  margin:38px 0;
+  background:#e7e7e7;
+}
+.request-submit-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  margin-top:40px;
+  padding:26px;
+  border-radius:16px;
+  background:#292929;
+}
+.request-submit-note{
+  max-width:610px;
+}
+.request-submit-note span{
+  display:block;
+  margin-bottom:7px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#aaa;
+}
+.request-submit-note p{
+  margin:0;
+  font-size:15px;
+  line-height:1.5;
+  color:#c8c8c8;
+}
+.request-submit{
+  flex:0 0 auto;
+  min-height:50px;
+  padding:13px 22px;
+  border:1px solid #fff;
+  border-radius:10px;
+  background:#fff;
+  color:#292929;
+  font:inherit;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
+}
+.request-submit:hover{
+  background:#f0f0f0;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.request-privacy{
+  margin:14px 0 0;
+  text-align:right;
+  font-size:12px;
+  line-height:1.5;
+  color:#999;
+}
+@media(max-width:760px){
+  .request-intro{
+    min-height:240px;
+    padding:30px 24px;
+  }
+  .request-intro h1{
+    font-size:34px;
+    margin-bottom:16px;
+  }
+  .request-intro p{
+    font-size:17px;
+  }
+  .request-card{
+    padding:32px 22px;
+    border-radius:18px;
+  }
+  .request-fields-two,
+  .request-fields-address{
+    grid-template-columns:1fr;
+  }
+  .request-fields-address{
+    margin-top:18px;
+  }
+  .request-divider{
+    margin:30px 0;
+  }
+  .request-submit-row{
+    flex-direction:column;
+    align-items:stretch;
+    margin-top:32px;
+    padding:22px;
+  }
+  .request-submit{
+    width:100%;
+  }
+  .request-privacy{
+    text-align:left;
+  }
+}
