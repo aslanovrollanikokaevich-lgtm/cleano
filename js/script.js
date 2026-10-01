@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cityPicker = document.querySelector('.city-picker');
-  if (!cityPicker) return;
+  const languagePicker = document.querySelector('.language-picker');
+  if (!cityPicker || !languagePicker) return;
   const cityButton = document.querySelector('.city-button');
   const cityMenu = document.querySelector('.city-menu');
 
@@ -31,7 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
     closeCityMenu();
   });
 
+  const languageButton = document.querySelector('.language-button');
+  const languageMenu = document.querySelector('.language-menu');
+
+  const closeLanguageMenu = () => {
+    languageMenu.classList.remove('is-open');
+    languageButton.setAttribute('aria-expanded', 'false');
+    languageMenu.setAttribute('aria-hidden', 'true');
+  };
+
+  languageButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = languageMenu.classList.contains('is-open');
+    if (isOpen) {
+      closeLanguageMenu();
+    } else {
+      languageMenu.classList.add('is-open');
+      languageButton.setAttribute('aria-expanded', 'true');
+      languageMenu.setAttribute('aria-hidden', 'false');
+    }
+  });
+
+  languageMenu.addEventListener('click', (event) => {
+    const option = event.target.closest('[data-language]');
+    if (!option) return;
+    languageButton.textContent = option.dataset.language;
+    closeLanguageMenu();
+  });
+
   document.addEventListener('click', (event) => {
     if (!cityPicker.contains(event.target)) closeCityMenu();
+    if (!languagePicker.contains(event.target)) closeLanguageMenu();
   });
 });
