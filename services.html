@@ -44,6 +44,58 @@
         <p>Подбираем формат уборки под ваш объект, площадь и задачи. Работаем с квартирами, частными домами, коммерческими помещениями и мягкой мебелью.</p>
       </div>
     </section>
+
+    <section class="catalog-services" aria-label="Каталог услуг">
+      <article class="catalog-service-card">
+        <div class="catalog-service-photo placeholder">Фото</div>
+        <div class="catalog-service-copy">
+          <h2>Уборка квартир</h2>
+          <h3>Чистота и порядок в каждой комнате</h3>
+          <p>Профессиональная уборка квартир с вниманием к деталям. Подходит для разовой уборки и регулярного поддержания чистоты.</p>
+          <button class="catalog-service-button" type="button" data-service-modal="apartments">Подробнее об услуге →</button>
+        </div>
+      </article>
+
+      <article class="catalog-service-card reverse">
+        <div class="catalog-service-copy">
+          <h2>Уборка частных домов</h2>
+          <h3>Чистый дом без лишних забот</h3>
+          <p>Убираем частные дома и коттеджи независимо от площади и планировки. Объём работ согласовываем перед началом уборки.</p>
+          <button class="catalog-service-button" type="button" data-service-modal="houses">Подробнее об услуге →</button>
+        </div>
+        <div class="catalog-service-photo placeholder">Фото</div>
+      </article>
+
+      <article class="catalog-service-card">
+        <div class="catalog-service-photo placeholder">Фото</div>
+        <div class="catalog-service-copy">
+          <h2>Уборка коммерческих помещений</h2>
+          <h3>Порядок, который работает на ваш бизнес</h3>
+          <p>Поддерживаем чистоту в офисах, кафе, ресторанах, магазинах и других коммерческих помещениях.</p>
+          <button class="catalog-service-button" type="button" data-service-modal="commercial">Подробнее об услуге →</button>
+        </div>
+      </article>
+
+      <article class="catalog-service-card reverse">
+        <div class="catalog-service-copy">
+          <h2>Химчистка мягкой мебели</h2>
+          <h3>Возвращаем мебели свежий вид</h3>
+          <p>Профессиональная химчистка диванов, кресел и другой мягкой мебели с выездом специалиста на объект.</p>
+          <button class="catalog-service-button" type="button" data-service-modal="furniture">Подробнее об услуге →</button>
+        </div>
+        <div class="catalog-service-photo placeholder">Фото</div>
+      </article>
+    </section>
+
+    <div class="service-modal" id="service-modal" aria-hidden="true">
+      <div class="service-modal-backdrop" data-modal-close></div>
+      <div class="service-modal-window" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+        <button class="service-modal-close" type="button" aria-label="Закрыть" data-modal-close>×</button>
+        <div class="service-modal-content">
+          <h2 id="service-modal-title"></h2>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
