@@ -117,9 +117,75 @@ document.addEventListener('DOMContentLoaded', () => {
   const requestForm = document.querySelector('.request-form-modern');
   const requestSuccess = document.querySelector('#request-success');
 
+  const clearFieldError = (field) => {
+    field.classList.remove('has-error');
+    field.removeAttribute('aria-invalid');
+    const error = field.closest('.request-modern-field')?.querySelector('.request-field-error');
+    error?.remove();
+  };
+
+  const showFieldError = (field, message) => {
+    clearFieldError(field);
+    field.classList.add('has-error');
+    field.setAttribute('aria-invalid', 'true');
+    const wrapper = field.closest('.request-modern-field');
+    if (!wrapper) return;
+    const error = document.createElement('small');
+    error.className = 'request-field-error';
+    error.textContent = message;
+    wrapper.appendChild(error);
+  };
+
+  const validateRequestForm = () => {
+    const fields = [
+      [requestForm.querySelector('[name="name"]'), 'Введите имя.'],
+      [requestForm.querySelector('[name="phone"]'), 'Введите номер телефона.'],
+      [requestForm.querySelector('[name="city"]'), 'Выберите город.'],
+      [requestForm.querySelector('[name="property"]'), 'Выберите тип объекта.'],
+      [requestForm.querySelector('[name="address"]'), 'Укажите адрес объекта.'],
+      [requestForm.querySelector('[name="date"]'), 'Укажите предпочтительную дату.'],
+      [requestForm.querySelector('[name="time"]'), 'Выберите удобный временной интервал.']
+    ];
+
+    const propertyValue = propertyType?.value;
+    if (propertyValue === 'Мягкая мебель') {
+      fields.push(
+        [requestForm.querySelector('[name="furniture"]'), 'Укажите, какую мебель нужно очистить.'],
+        [requestForm.querySelector('[name="furniture_count"]'), 'Укажите количество изделий.']
+      );
+    } else {
+      fields.push([requestForm.querySelector('[name="area"]'), 'Укажите примерную площадь.']);
+    }
+
+    const invalid = fields.filter(([field]) => field && !field.value.trim());
+    requestForm.querySelectorAll('.request-modern-field input, .request-modern-field select').forEach((field) => {
+      if (!invalid.some(([item]) => item === field)) clearFieldError(field);
+    });
+
+    invalid.forEach(([field, message]) => showFieldError(field, message));
+
+    if (!invalid.length) return true;
+
+    const firstInvalid = invalid[0][0];
+    firstInvalid?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => firstInvalid?.focus({ preventScroll: true }), 350);
+    const targetStep = firstInvalid?.closest('.request-modern-section');
+    if (targetStep) updateActiveStep?.(targetStep.id);
+    return false;
+  };
+
+  requestForm?.querySelectorAll('input, select, textarea').forEach((field) => {
+    field.addEventListener('input', () => {
+      if (field.value.trim()) clearFieldError(field);
+    });
+    field.addEventListener('change', () => {
+      if (field.value.trim()) clearFieldError(field);
+    });
+  });
+
   requestForm?.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (!requestSuccess) return;
+    if (!requestSuccess || !validateRequestForm()) return;
 
     requestForm.querySelectorAll(':scope > *:not(#request-success)').forEach((element) => {
       element.style.display = 'none';
