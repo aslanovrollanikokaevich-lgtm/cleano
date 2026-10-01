@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" role="img" aria-labelledby="title desc">
-<title id="title">CLEANO</title><desc id="desc">Minimalist CLEANO cleaning company logo</desc>
-<rect width="620" height="180" fill="none"/>
-<g fill="#1c5bed">
-<path d="M84 35c-28 0-50 18-58 43 7-9 17-15 29-15 15 0 25 7 35 18 8 9 17 14 29 14 12 0 24-6 32-16-7 25-29 43-57 43-35 0-63-28-63-63s28-63 63-63c27 0 50 17 58 41-9-10-21-16-33-16-13 0-22 6-31 15-10 11-20 18-34 18-11 0-21-5-29-14 9-25 32-43 59-43z"/>
-<path d="M545 22l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">CLEANO</title>
+<desc id="desc">CLEANO cleaning company logo</desc>
+<defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1764ff"/>
+    <stop offset="1" stop-color="#1452e8"/>
+  </linearGradient>
+</defs>
+<g fill="url(#blue)">
+  <path d="M270 72c-32-36-76-56-124-56C68 16 8 76 8 150s60 134 138 134c48 0 92-20 124-56l-55-48c-18 21-41 32-69 32-35 0-62-27-62-62s27-62 62-62c28 0 51 11 69 32z"/>
+  <path d="M31 181c18 16 40 24 64 24 30 0 52-12 75-31 17-14 34-22 55-22 20 0 39 8 54 22-19 31-53 52-93 52-67 0-119-18-155-45z"/>
+  <path d="M1067 34l10 27 27 10-27 10-10 27-10-27-27-10 27-10z"/>
 </g>
-<text x="160" y="126" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" letter-spacing="2" fill="#22252a">LEANO</text>
+<text x="300" y="211" font-family="Arial, Helvetica, sans-serif" font-size="190" font-weight="800" letter-spacing="1" fill="#20242a">LEANO</text>
 </svg>
