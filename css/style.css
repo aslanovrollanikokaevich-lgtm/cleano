@@ -1413,3 +1413,113 @@ body.modal-open{
     text-align:left;
   }
 }
+
+
+/* Request form — refined cards and accent */
+.request-card-modern{
+  background:#f4f4f4;
+}
+.request-progress{
+  position:sticky;
+  top:12px;
+  z-index:20;
+  margin:0 0 16px;
+  border:1px solid #e1e5e7;
+  border-radius:16px;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 8px 24px rgba(38,52,60,.08);
+  backdrop-filter:blur(8px);
+}
+.request-progress-item{
+  border:0;
+  background:transparent;
+  padding:0;
+  font:inherit;
+  cursor:pointer;
+  transition:transform .18s ease;
+}
+.request-progress-item:hover{
+  transform:translateY(-1px);
+}
+.request-progress-item span{
+  background:#e9edef;
+  color:#718797;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease;
+}
+.request-progress-item strong{
+  transition:color .2s ease;
+}
+.request-progress-item.is-active span{
+  background:#718797;
+  color:#fff;
+  box-shadow:0 4px 10px rgba(113,135,151,.22);
+}
+.request-progress-item.is-active strong{
+  color:#718797;
+}
+.request-progress-line{
+  background:#dce2e5;
+}
+
+.request-modern-section{
+  margin:16px 0;
+  padding:34px 38px;
+  border:1px solid #e1e5e7;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 5px 20px rgba(38,52,60,.055);
+  scroll-margin-top:30px;
+}
+.request-modern-section:first-of-type{
+  margin-top:0;
+}
+.request-modern-number{
+  border-color:#d7e0e4;
+  background:#f2f5f6;
+  color:#718797;
+}
+.request-modern-heading h2{
+  color:#222;
+}
+.request-modern-field input,
+.request-modern-field select,
+.request-modern-field textarea{
+  border-color:#d9dfe2;
+  background:#fbfcfc;
+}
+.request-modern-field input:hover,
+.request-modern-field select:hover,
+.request-modern-field textarea:hover{
+  border-color:#b9c6cd;
+}
+.request-modern-field input:focus,
+.request-modern-field select:focus,
+.request-modern-field textarea:focus{
+  border-color:#718797;
+  box-shadow:0 0 0 3px rgba(113,135,151,.12);
+}
+.request-modern-note{
+  background:#f0f4f5;
+  border:1px solid #e1e8eb;
+}
+.request-modern-note span{
+  background:#dce5e9;
+  color:#607784;
+}
+.request-modern-submit{
+  margin-top:22px;
+  background:#292929;
+  border-radius:18px;
+}
+@media(max-width:760px){
+  .request-progress{
+    top:8px;
+    margin:0 0 12px;
+    border-radius:14px;
+  }
+  .request-modern-section{
+    margin:12px 0;
+    padding:28px 22px;
+    border-radius:16px;
+  }
+}
