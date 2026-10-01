@@ -69,11 +69,11 @@
           <div class="request-modern-fields two">
             <label class="request-modern-field">
               <span>Имя</span>
-              <input type="text" name="name" placeholder="Введите ваше имя" autocomplete="name">
+              <input type="text" name="name" placeholder="Введите ваше имя" required autocomplete="name">
             </label>
             <label class="request-modern-field">
               <span>Номер телефона</span>
-              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
             </label>
           </div>
         </section>
@@ -89,14 +89,14 @@
           <div class="request-modern-fields two">
             <label class="request-modern-field">
               <span>Город</span>
-              <select name="city">
+              <select name="city" required>
                 <option value="almaty">Алматы</option>
                 <option value="astana">Астана</option>
               </select>
             </label>
             <label class="request-modern-field">
               <span>Тип объекта</span>
-              <select name="property" id="property-type">
+              <select name="property" id="property-type" required>
                 <option value="">Выберите тип объекта</option>
                 <option>Квартира</option>
                 <option>Частный дом / коттедж</option>
@@ -112,11 +112,11 @@
           <div class="request-modern-fields address-row">
             <label class="request-modern-field">
               <span>Адрес объекта</span>
-              <input type="text" name="address" placeholder="Улица, дом, квартира / помещение" autocomplete="street-address">
+              <input type="text" name="address" placeholder="Улица, дом, квартира / помещение" required autocomplete="street-address">
             </label>
             <label class="request-modern-field area-field-modern" id="area-field">
               <span>Примерная площадь</span>
-              <input type="number" name="area" min="1" placeholder="65 м²">
+              <input type="number" name="area" min="1" placeholder="65 м²" required>
             </label>
           </div>
 
@@ -143,11 +143,11 @@
           <div class="request-modern-fields two">
             <label class="request-modern-field">
               <span>Предпочтительная дата</span>
-              <input type="date" name="date">
+              <input type="date" name="date" required>
             </label>
             <label class="request-modern-field">
               <span>Предпочтительное время</span>
-              <select name="time">
+              <select name="time" required>
                 <option value="">Выберите интервал</option>
                 <option>09:00–12:00</option>
                 <option>12:00–15:00</option>
