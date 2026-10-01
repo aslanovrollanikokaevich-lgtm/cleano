@@ -13,7 +13,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#f4f4
 .navigation a:hover{background:#363636;transform:scale(1.035);box-shadow:0 6px 14px rgba(0,0,0,.16)}
 .navigation a.active{background:#363636}
 
-.main-content{position:relative;z-index:2;max-width:1180px;margin:24px auto 80px;padding:0 18px}
+.main-content{position:relative;z-index:4;max-width:1180px;margin:24px auto 80px;padding:0 18px}
 .homepage-hero{min-height:320px;margin-bottom:24px;padding:44px 52px;display:flex;align-items:center;background:#fff;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
 .homepage-hero-copy{max-width:900px}
 .homepage-hero h1{margin:0 0 22px;font-size:clamp(34px,4.2vw,54px);line-height:1.06;color:#222}
