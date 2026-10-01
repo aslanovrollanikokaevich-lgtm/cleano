@@ -729,20 +729,27 @@ body.modal-open{
   scrollbar-width:thin;
   scrollbar-color:#9a9a9a transparent;
 }
-.service-modal-window::-webkit-scrollbar{
+.service-modal-content{
+  max-height:calc(100vh - 48px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  scrollbar-width:thin;
+  scrollbar-color:#9a9a9a transparent;
+}
+.service-modal-content::-webkit-scrollbar{
   width:10px;
 }
-.service-modal-window::-webkit-scrollbar-track{
+.service-modal-content::-webkit-scrollbar-track{
   background:transparent;
-  margin:22px 0;
+  margin:18px 0;
 }
-.service-modal-window::-webkit-scrollbar-thumb{
+.service-modal-content::-webkit-scrollbar-thumb{
   background:#9a9a9a;
   border:3px solid transparent;
   background-clip:padding-box;
   border-radius:999px;
 }
-.service-modal-window::-webkit-scrollbar-thumb:hover{
+.service-modal-content::-webkit-scrollbar-thumb:hover{
   background:#777;
   border:3px solid transparent;
   background-clip:padding-box;
