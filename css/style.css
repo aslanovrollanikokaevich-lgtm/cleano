@@ -241,3 +241,44 @@ p{font-size:18px;line-height:1.6;color:#555}
     gap:7px;
   }
 }
+
+
+.services-intro{
+  min-height:260px;
+  margin-bottom:24px;
+  padding:44px 52px;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 6px 24px rgba(0,0,0,.08);
+}
+.services-intro-copy{
+  max-width:850px;
+}
+.services-intro h1{
+  margin:0 0 18px;
+  font-size:clamp(34px,4.2vw,54px);
+  line-height:1.06;
+  color:#222;
+}
+.services-intro p{
+  margin:0;
+  font-size:18px;
+  line-height:1.62;
+  color:#555;
+}
+
+@media(max-width:760px){
+  .services-intro{
+    min-height:240px;
+    padding:30px 24px;
+  }
+  .services-intro h1{
+    font-size:34px;
+    margin-bottom:16px;
+  }
+  .services-intro p{
+    font-size:17px;
+  }
+}
