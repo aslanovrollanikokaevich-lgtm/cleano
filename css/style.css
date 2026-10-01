@@ -734,7 +734,7 @@ body.modal-open{
 }
 .service-modal-window::-webkit-scrollbar-track{
   background:transparent;
-  margin:14px 0;
+  margin:22px 0;
 }
 .service-modal-window::-webkit-scrollbar-thumb{
   background:#9a9a9a;
