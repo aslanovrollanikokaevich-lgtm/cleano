@@ -1523,3 +1523,37 @@ body.modal-open{
     border-radius:16px;
   }
 }
+
+
+/* Darker graphite accent for request form */
+.request-progress-item span{
+  background:#dedede;
+  color:#5b5b5b;
+}
+.request-progress-item.is-active span{
+  background:#5b5b5b;
+  color:#fff;
+  box-shadow:0 4px 10px rgba(45,45,45,.18);
+}
+.request-progress-item.is-active strong{
+  color:#4a4a4a;
+}
+.request-modern-number{
+  border-color:#d2d2d2;
+  background:#f1f1f1;
+  color:#5b5b5b;
+}
+.request-modern-field input:focus,
+.request-modern-field select:focus,
+.request-modern-field textarea:focus{
+  border-color:#666;
+  box-shadow:0 0 0 3px rgba(70,70,70,.10);
+}
+.request-modern-note{
+  background:#f0f0f0;
+  border-color:#dedede;
+}
+.request-modern-note span{
+  background:#dedede;
+  color:#555;
+}
