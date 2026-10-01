@@ -7,3 +7,13 @@
 .city-menu.is-open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
 .city-menu button{display:block;width:100%;border:0;background:transparent;border-radius:6px;padding:9px 10px;text-align:left;font-size:14px;cursor:pointer}
 .city-menu button:hover{background:#f0f0f0}
+
+.header-controls{display:flex;align-items:flex-start;gap:8px;margin-left:auto}
+.language-picker{position:relative;z-index:10}
+.language-button{border:0;border-radius:8px;background:#8b8b8b;color:#fff;padding:7px 13px;font-size:14px;font-weight:700;line-height:1.2;cursor:pointer}
+.language-button:hover{background:#7d7d7d}
+.language-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:100px;padding:6px;background:#fff;border-radius:9px;box-shadow:0 8px 24px rgba(0,0,0,.16);opacity:0;visibility:hidden;transform:translateY(-10px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s ease}
+.language-menu.is-open{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.language-menu button{display:block;width:100%;border:0;background:transparent;border-radius:6px;padding:9px 10px;text-align:left;font-size:14px;cursor:pointer}
+.language-menu button:hover{background:#f0f0f0}
+@media(max-width:760px){.header-controls{gap:6px}.language-button,.city-button{padding:7px 10px}}
