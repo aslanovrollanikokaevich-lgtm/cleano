@@ -92,7 +92,57 @@
       <div class="service-modal-window" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
         <button class="service-modal-close" type="button" aria-label="Закрыть" data-modal-close>×</button>
         <div class="service-modal-content">
-          <h2 id="service-modal-title"></h2>
+          <div class="service-modal-header">
+            <span class="service-modal-kicker" id="service-modal-kicker"></span>
+            <h2 id="service-modal-title"></h2>
+            <p id="service-modal-lead"></p>
+          </div>
+
+          <div class="service-gallery" aria-label="Фотографии услуги">
+            <div class="service-gallery-track" id="service-gallery-track"></div>
+            <button class="service-gallery-arrow service-gallery-prev" type="button" aria-label="Предыдущее фото">‹</button>
+            <button class="service-gallery-arrow service-gallery-next" type="button" aria-label="Следующее фото">›</button>
+            <div class="service-gallery-dots" id="service-gallery-dots"></div>
+          </div>
+
+          <div class="service-modal-grid">
+            <section class="service-modal-section">
+              <h3>Что входит</h3>
+              <ul id="service-included"></ul>
+            </section>
+
+            <section class="service-modal-section">
+              <h3>Что можно добавить</h3>
+              <ul id="service-extra"></ul>
+            </section>
+          </div>
+
+          <section class="service-modal-info">
+            <div class="service-info-item">
+              <span>Стоимость</span>
+              <strong id="service-price"></strong>
+              <small id="service-price-note"></small>
+            </div>
+            <div class="service-info-item">
+              <span>Продолжительность</span>
+              <strong id="service-duration"></strong>
+              <small id="service-duration-note"></small>
+            </div>
+            <div class="service-info-item">
+              <span>Подготовка</span>
+              <strong id="service-prep"></strong>
+              <small id="service-prep-note"></small>
+            </div>
+          </section>
+
+          <section class="service-modal-note">
+            <h3>Важно знать</h3>
+            <p id="service-note"></p>
+          </section>
+
+          <div class="service-modal-actions">
+            <a class="service-modal-cta" id="service-cta" href="request.html">Оставить заявку →</a>
+          </div>
         </div>
       </div>
     </div>
