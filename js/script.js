@@ -64,4 +64,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!cityPicker.contains(event.target)) closeCityMenu();
     if (!languagePicker.contains(event.target)) closeLanguageMenu();
   });
+
+  const serviceModal = document.querySelector('#service-modal');
+  const serviceModalTitle = document.querySelector('#service-modal-title');
+  const serviceModalButtons = document.querySelectorAll('[data-service-modal]');
+  const serviceModalTitles = {
+    apartments: 'Уборка квартир',
+    houses: 'Уборка частных домов',
+    commercial: 'Уборка коммерческих помещений',
+    furniture: 'Химчистка мягкой мебели'
+  };
+
+  const closeServiceModal = () => {
+    if (!serviceModal) return;
+    serviceModal.classList.remove('is-open');
+    serviceModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+
+  if (serviceModal) {
+    serviceModalButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        serviceModalTitle.textContent = serviceModalTitles[button.dataset.serviceModal] || '';
+        serviceModal.classList.add('is-open');
+        serviceModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+      });
+    });
+
+    serviceModal.querySelectorAll('[data-modal-close]').forEach((element) => {
+      element.addEventListener('click', closeServiceModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeServiceModal();
+    });
+  }
 });
