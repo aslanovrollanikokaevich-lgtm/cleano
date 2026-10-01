@@ -42,7 +42,7 @@
     <section class="request-intro">
       <div class="request-intro-copy">
         <h1>Оставить заявку</h1>
-        <p>Расскажите немного об объекте и желаемой уборке. Мы свяжемся с вами, уточним детали, рассчитаем стоимость и согласуем удобное время.</p>
+        <p>Предоставьте основные сведения об объекте и желаемых условиях обслуживания. Менеджер CLEANO свяжется с вами для уточнения деталей, расчёта стоимости и согласования времени.</p>
       </div>
     </section>
 
@@ -52,14 +52,14 @@
           <div class="request-section-heading">
             <span>01</span>
             <div>
-              <h2>Ваши данные</h2>
-              <p>Как с вами связаться?</p>
+              <h2>Контактные данные</h2>
+              <p>Укажите контактную информацию для связи.</p>
             </div>
           </div>
           <div class="request-fields request-fields-two">
             <label class="request-field">
               <span>Имя</span>
-              <input type="text" name="name" placeholder="Ваше имя" autocomplete="name">
+              <input type="text" name="name" placeholder="Введите ваше имя" autocomplete="name">
             </label>
             <label class="request-field">
               <span>Телефон</span>
@@ -74,8 +74,8 @@
           <div class="request-section-heading">
             <span>02</span>
             <div>
-              <h2>Объект</h2>
-              <p>Где и что нужно убрать?</p>
+              <h2>Параметры объекта</h2>
+              <p>Укажите тип объекта и основные параметры.</p>
             </div>
           </div>
           <div class="request-fields request-fields-two">
@@ -88,8 +88,8 @@
             </label>
             <label class="request-field">
               <span>Тип объекта</span>
-              <select name="property">
-                <option value="">Выберите объект</option>
+              <select name="property" id="property-type">
+                <option value="">Выберите тип объекта</option>
                 <option>Квартира</option>
                 <option>Частный дом / коттедж</option>
                 <option>Офис</option>
@@ -101,12 +101,22 @@
           </div>
           <div class="request-fields request-fields-address">
             <label class="request-field">
-              <span>Адрес уборки</span>
+              <span>Адрес объекта</span>
               <input type="text" name="address" placeholder="Улица, дом, квартира / офис" autocomplete="street-address">
             </label>
-            <label class="request-field request-field-small">
-              <span>Площадь, м²</span>
-              <input type="number" name="area" min="1" placeholder="Например, 65">
+            <label class="request-field request-field-small" id="area-field">
+              <span>Примерная площадь</span>
+              <input type="number" name="area" min="1" placeholder="Например, 65 м²">
+            </label>
+          </div>
+          <div class="request-fields request-fields-two" id="furniture-fields" hidden>
+            <label class="request-field">
+              <span>Мебель</span>
+              <input type="text" name="furniture" placeholder="Например, диван, кресла">
+            </label>
+            <label class="request-field">
+              <span>Количество</span>
+              <input type="number" name="furniture_count" min="1" placeholder="Например, 2">
             </label>
           </div>
         </div>
@@ -117,29 +127,19 @@
           <div class="request-section-heading">
             <span>03</span>
             <div>
-              <h2>Уборка</h2>
-              <p>Выберите услугу и удобное время.</p>
+              <h2>Дата и время</h2>
+              <p>Укажите предпочтительные дату и время обслуживания.</p>
             </div>
           </div>
           <div class="request-fields request-fields-two">
             <label class="request-field">
-              <span>Услуга</span>
-              <select name="service">
-                <option value="">Выберите услугу</option>
-                <option>Уборка квартир</option>
-                <option>Уборка частных домов</option>
-                <option>Уборка коммерческих помещений</option>
-                <option>Химчистка мягкой мебели</option>
-              </select>
-            </label>
-            <label class="request-field">
-              <span>Желаемая дата</span>
+              <span>Предпочтительная дата</span>
               <input type="date" name="date">
             </label>
           </div>
           <div class="request-fields request-fields-two">
             <label class="request-field">
-              <span>Желаемое время</span>
+              <span>Предпочтительное время</span>
               <select name="time">
                 <option value="">Выберите время</option>
                 <option>09:00–12:00</option>
@@ -149,8 +149,8 @@
               </select>
             </label>
             <div class="request-hint-box">
-              <strong>Можно указать удобный интервал</strong>
-              <span>Точное время согласуем с менеджером после получения заявки.</span>
+              <strong>Время можно указать ориентировочно</strong>
+              <span>Точный интервал согласуем с менеджером после получения заявки.</span>
             </div>
           </div>
         </div>
@@ -161,20 +161,20 @@
           <div class="request-section-heading">
             <span>04</span>
             <div>
-              <h2>Дополнительно</h2>
-              <p>Есть важные детали? Расскажите о них.</p>
+              <h2>Дополнительная информация</h2>
+              <p>Укажите особенности объекта или дополнительные пожелания.</p>
             </div>
           </div>
           <label class="request-field">
-            <span>Комментарий</span>
-            <textarea name="comment" rows="5" placeholder="Например: уборка после ремонта, есть домашние животные, нужно почистить диван и т.д."></textarea>
+            <span>Комментарий к заявке</span>
+            <textarea name="comment" rows="5" placeholder="Например: уборка после ремонта, наличие домашних животных, сложные загрязнения и другие особенности объекта."></textarea>
           </label>
         </div>
 
         <div class="request-submit-row">
           <div class="request-submit-note">
             <span>После отправки</span>
-            <p>Менеджер CLEANO свяжется с вами, чтобы уточнить детали, подтвердить стоимость и согласовать время уборки.</p>
+            <p>Менеджер CLEANO свяжется с вами для уточнения деталей, расчёта стоимости и согласования времени обслуживания.</p>
           </div>
           <button class="request-submit" type="submit">Отправить заявку →</button>
         </div>
