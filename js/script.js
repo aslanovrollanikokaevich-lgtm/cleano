@@ -79,6 +79,41 @@ document.addEventListener('DOMContentLoaded', () => {
   propertyType?.addEventListener('change', updateRequestFields);
   updateRequestFields();
 
+
+  const requestProgress = document.querySelector('.request-progress');
+  const requestSteps = document.querySelectorAll('.request-modern-section[id]');
+  const progressItems = document.querySelectorAll('[data-scroll-target]');
+
+  progressItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const target = document.getElementById(item.dataset.scrollTarget);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  if (requestProgress && requestSteps.length && progressItems.length) {
+    const updateActiveStep = (id) => {
+      progressItems.forEach((item) => {
+        item.classList.toggle('is-active', item.dataset.scrollTarget === id);
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) updateActiveStep(visible.target.id);
+    }, {
+      root: null,
+      rootMargin: '-18% 0px -55% 0px',
+      threshold: [0.1, 0.35, 0.6]
+    });
+
+    requestSteps.forEach((step) => observer.observe(step));
+  }
+
   const serviceModal = document.querySelector('#service-modal');
   const serviceModalTitle = document.querySelector('#service-modal-title');
   const serviceModalKicker = document.querySelector('#service-modal-kicker');
