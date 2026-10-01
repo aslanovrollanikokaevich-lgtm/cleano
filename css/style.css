@@ -1633,3 +1633,24 @@ body.modal-open{
     border-radius:18px;
   }
 }
+
+
+/* Request validation states */
+.request-modern-field{
+  position:relative;
+}
+.request-modern-field input.has-error,
+.request-modern-field select.has-error,
+.request-modern-field textarea.has-error{
+  border-color:#b44a4a;
+  background:#fffafa;
+  box-shadow:0 0 0 3px rgba(180,74,74,.08);
+}
+.request-field-error{
+  display:block;
+  margin-top:7px;
+  font-size:13px;
+  line-height:1.4;
+  font-weight:600;
+  color:#a33f3f;
+}
