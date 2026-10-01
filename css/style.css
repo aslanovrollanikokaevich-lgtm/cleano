@@ -720,3 +720,53 @@ body.modal-open{
     min-height:0;
   }
 }
+
+
+/* Modal scrolling and rounded interface */
+.service-modal-window{
+  overflow-y:auto;
+  overflow-x:hidden;
+  scrollbar-width:thin;
+  scrollbar-color:#9a9a9a transparent;
+}
+.service-modal-window::-webkit-scrollbar{
+  width:10px;
+}
+.service-modal-window::-webkit-scrollbar-track{
+  background:transparent;
+  margin:14px 0;
+}
+.service-modal-window::-webkit-scrollbar-thumb{
+  background:#9a9a9a;
+  border:3px solid transparent;
+  background-clip:padding-box;
+  border-radius:999px;
+}
+.service-modal-window::-webkit-scrollbar-thumb:hover{
+  background:#777;
+  border:3px solid transparent;
+  background-clip:padding-box;
+}
+
+.service-modal-grid{
+  align-items:stretch;
+}
+.service-modal-section{
+  border-radius:16px;
+  overflow:hidden;
+}
+.service-modal-info{
+  align-items:stretch;
+}
+.service-info-item{
+  border-radius:16px;
+  overflow:hidden;
+}
+.service-modal-note{
+  border-radius:0 16px 16px 0;
+  overflow:hidden;
+}
+.service-gallery{
+  border-radius:16px;
+  overflow:hidden;
+}
