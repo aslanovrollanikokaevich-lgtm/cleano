@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (requestProgress && requestSteps.length && progressItems.length) {
-    const updateActiveStep = (id) => {
-      progressItems.forEach((item) => {
-        item.classList.toggle('is-active', item.dataset.scrollTarget === id);
-      });
-    };
+  const updateActiveStep = (id) => {
+    progressItems.forEach((item) => {
+      item.classList.toggle('is-active', item.dataset.scrollTarget === id);
+    });
+  };
 
+  if (requestProgress && requestSteps.length && progressItems.length) {
     const observer = new IntersectionObserver((entries) => {
       const visible = entries
         .filter((entry) => entry.isIntersecting)
