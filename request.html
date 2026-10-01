@@ -46,47 +46,55 @@
       </div>
     </section>
 
-    <section class="request-card">
-      <form class="request-form" action="#" method="post">
-        <div class="request-section">
-          <div class="request-section-heading">
-            <span>01</span>
+    <section class="request-card request-card-modern">
+      <form class="request-form request-form-modern" action="#" method="post">
+        <div class="request-progress">
+          <div class="request-progress-item is-active"><span>01</span><strong>Контакты</strong></div>
+          <div class="request-progress-line"></div>
+          <div class="request-progress-item"><span>02</span><strong>Объект</strong></div>
+          <div class="request-progress-line"></div>
+          <div class="request-progress-item"><span>03</span><strong>Дата</strong></div>
+          <div class="request-progress-line"></div>
+          <div class="request-progress-item"><span>04</span><strong>Детали</strong></div>
+        </div>
+
+        <div class="request-modern-section">
+          <div class="request-modern-heading">
+            <span class="request-modern-number">01</span>
             <div>
               <h2>Контактные данные</h2>
-              <p>Укажите контактную информацию для связи.</p>
+              <p>Укажите данные, по которым менеджер сможет с вами связаться.</p>
             </div>
           </div>
-          <div class="request-fields request-fields-two">
-            <label class="request-field">
+          <div class="request-modern-fields two">
+            <label class="request-modern-field">
               <span>Имя</span>
               <input type="text" name="name" placeholder="Введите ваше имя" autocomplete="name">
             </label>
-            <label class="request-field">
-              <span>Телефон</span>
+            <label class="request-modern-field">
+              <span>Номер телефона</span>
               <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
             </label>
           </div>
         </div>
 
-        <div class="request-divider"></div>
-
-        <div class="request-section">
-          <div class="request-section-heading">
-            <span>02</span>
+        <div class="request-modern-section">
+          <div class="request-modern-heading">
+            <span class="request-modern-number">02</span>
             <div>
               <h2>Параметры объекта</h2>
-              <p>Укажите тип объекта и основные параметры.</p>
+              <p>Основная информация о месте проведения работ.</p>
             </div>
           </div>
-          <div class="request-fields request-fields-two">
-            <label class="request-field">
+          <div class="request-modern-fields two">
+            <label class="request-modern-field">
               <span>Город</span>
               <select name="city">
                 <option value="almaty">Алматы</option>
                 <option value="astana">Астана</option>
               </select>
             </label>
-            <label class="request-field">
+            <label class="request-modern-field">
               <span>Тип объекта</span>
               <select name="property" id="property-type">
                 <option value="">Выберите тип объекта</option>
@@ -100,47 +108,47 @@
               </select>
             </label>
           </div>
-          <div class="request-fields request-fields-address">
-            <label class="request-field">
+
+          <div class="request-modern-fields address-row">
+            <label class="request-modern-field">
               <span>Адрес объекта</span>
-              <input type="text" name="address" placeholder="Улица, дом, квартира / офис" autocomplete="street-address">
+              <input type="text" name="address" placeholder="Улица, дом, квартира / помещение" autocomplete="street-address">
             </label>
-            <label class="request-field request-field-small" id="area-field">
+            <label class="request-modern-field area-field-modern" id="area-field">
               <span>Примерная площадь</span>
-              <input type="number" name="area" min="1" placeholder="Например, 65 м²">
+              <input type="number" name="area" min="1" placeholder="65 м²">
             </label>
           </div>
-          <div class="request-fields request-fields-two" id="furniture-fields" hidden>
-            <label class="request-field">
+
+          <div class="request-modern-fields two" id="furniture-fields" hidden>
+            <label class="request-modern-field">
               <span>Мебель</span>
-              <input type="text" name="furniture" placeholder="Например, диван, кресла">
+              <input type="text" name="furniture" placeholder="Например, диван или кресла">
             </label>
-            <label class="request-field">
-              <span>Количество</span>
+            <label class="request-modern-field">
+              <span>Количество изделий</span>
               <input type="number" name="furniture_count" min="1" placeholder="Например, 2">
             </label>
           </div>
         </div>
 
-        <div class="request-divider"></div>
-
-        <div class="request-section">
-          <div class="request-section-heading">
-            <span>03</span>
+        <div class="request-modern-section">
+          <div class="request-modern-heading">
+            <span class="request-modern-number">03</span>
             <div>
               <h2>Дата и время</h2>
-              <p>Укажите предпочтительные дату и время обслуживания.</p>
+              <p>Укажите желаемый день и удобный временной интервал.</p>
             </div>
           </div>
-          <div class="request-fields request-fields-two">
-            <label class="request-field">
+          <div class="request-modern-fields two">
+            <label class="request-modern-field">
               <span>Предпочтительная дата</span>
               <input type="date" name="date">
             </label>
-            <label class="request-field">
+            <label class="request-modern-field">
               <span>Предпочтительное время</span>
               <select name="time">
-                <option value="">Выберите время</option>
+                <option value="">Выберите интервал</option>
                 <option>09:00–12:00</option>
                 <option>12:00–15:00</option>
                 <option>15:00–18:00</option>
@@ -148,40 +156,37 @@
               </select>
             </label>
           </div>
-          <div class="request-fields request-fields-two">
-            <div class="request-hint-box">
-              <strong>Время можно указать ориентировочно</strong>
-              <span>Точный интервал согласуем с менеджером после получения заявки.</span>
-            </div>
+          <div class="request-modern-note">
+            <span>Важно</span>
+            <p>Указанное время является предпочтительным. Точный интервал обслуживания менеджер согласует с вами после получения заявки.</p>
           </div>
         </div>
 
-        <div class="request-divider"></div>
-
-        <div class="request-section">
-          <div class="request-section-heading">
-            <span>04</span>
+        <div class="request-modern-section">
+          <div class="request-modern-heading">
+            <span class="request-modern-number">04</span>
             <div>
               <h2>Дополнительная информация</h2>
-              <p>Укажите особенности объекта или дополнительные пожелания.</p>
+              <p>Расскажите о важных особенностях объекта или ваших пожеланиях.</p>
             </div>
           </div>
-          <label class="request-field">
+          <label class="request-modern-field">
             <span>Комментарий к заявке</span>
-            <textarea name="comment" rows="5" placeholder="Например: уборка после ремонта, наличие домашних животных, сложные загрязнения и другие особенности объекта."></textarea>
+            <textarea name="comment" rows="5" placeholder="Например: уборка после ремонта, домашние животные, сложные загрязнения или другие особенности."></textarea>
           </label>
         </div>
 
-        <div class="request-submit-row">
-          <div class="request-submit-note">
-            <span>После отправки</span>
-            <p>Менеджер CLEANO свяжется с вами для уточнения деталей, расчёта стоимости и согласования времени обслуживания.</p>
+        <div class="request-modern-submit">
+          <div>
+            <h2>Почти готово</h2>
+            <p>После отправки заявки менеджер CLEANO свяжется с вами, уточнит детали, рассчитает стоимость и согласует время обслуживания.</p>
           </div>
-          <button class="request-submit" type="submit">Отправить заявку →</button>
+          <button type="submit">Отправить заявку <span>→</span></button>
         </div>
-        <p class="request-privacy">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
+        <p class="request-modern-privacy">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
       </form>
     </section>
+
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
