@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cityPicker = document.querySelector('.city-picker');
+  if (!cityPicker) return;
   const cityButton = document.querySelector('.city-button');
   const cityMenu = document.querySelector('.city-menu');
 
