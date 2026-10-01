@@ -114,6 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
     requestSteps.forEach((step) => observer.observe(step));
   }
 
+  const requestForm = document.querySelector('.request-form-modern');
+  const requestSuccess = document.querySelector('#request-success');
+
+  requestForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!requestSuccess) return;
+
+    requestForm.querySelectorAll(':scope > *:not(#request-success)').forEach((element) => {
+      element.style.display = 'none';
+    });
+
+    requestSuccess.classList.add('is-visible');
+    requestSuccess.setAttribute('aria-hidden', 'false');
+    requestSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
   const serviceModal = document.querySelector('#service-modal');
   const serviceModalTitle = document.querySelector('#service-modal-title');
   const serviceModalKicker = document.querySelector('#service-modal-kicker');
