@@ -17,3 +17,7 @@
 .language-menu button{display:block;width:100%;border:0;background:transparent;border-radius:6px;padding:9px 10px;text-align:left;font-size:14px;cursor:pointer}
 .language-menu button:hover{background:#f0f0f0}
 @media(max-width:760px){.header-controls{gap:6px}.language-button,.city-button{padding:7px 10px}}
+
+.logo{display:flex;align-items:flex-start;width:185px;height:auto;text-decoration:none}
+.logo img{display:block;width:100%;height:auto}
+@media(max-width:760px){.logo{width:150px}}
