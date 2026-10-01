@@ -48,17 +48,17 @@
 
     <section class="request-card request-card-modern">
       <form class="request-form request-form-modern" action="#" method="post">
-        <div class="request-progress">
-          <div class="request-progress-item is-active"><span>01</span><strong>Контакты</strong></div>
+        <nav class="request-progress" aria-label="Этапы заявки">
+          <button class="request-progress-item is-active" type="button" data-scroll-target="request-step-1"><span>01</span><strong>Контакты</strong></button>
           <div class="request-progress-line"></div>
-          <div class="request-progress-item"><span>02</span><strong>Объект</strong></div>
+          <button class="request-progress-item" type="button" data-scroll-target="request-step-2"><span>02</span><strong>Объект</strong></button>
           <div class="request-progress-line"></div>
-          <div class="request-progress-item"><span>03</span><strong>Дата</strong></div>
+          <button class="request-progress-item" type="button" data-scroll-target="request-step-3"><span>03</span><strong>Дата</strong></button>
           <div class="request-progress-line"></div>
-          <div class="request-progress-item"><span>04</span><strong>Детали</strong></div>
-        </div>
+          <button class="request-progress-item" type="button" data-scroll-target="request-step-4"><span>04</span><strong>Детали</strong></button>
+        </nav>
 
-        <div class="request-modern-section">
+        <section class="request-modern-section" id="request-step-1">
           <div class="request-modern-heading">
             <span class="request-modern-number">01</span>
             <div>
@@ -76,9 +76,9 @@
               <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
             </label>
           </div>
-        </div>
+        </section>
 
-        <div class="request-modern-section">
+        <section class="request-modern-section" id="request-step-2">
           <div class="request-modern-heading">
             <span class="request-modern-number">02</span>
             <div>
@@ -130,9 +130,9 @@
               <input type="number" name="furniture_count" min="1" placeholder="Например, 2">
             </label>
           </div>
-        </div>
+        </section>
 
-        <div class="request-modern-section">
+        <section class="request-modern-section" id="request-step-3">
           <div class="request-modern-heading">
             <span class="request-modern-number">03</span>
             <div>
@@ -160,9 +160,9 @@
             <span>Важно</span>
             <p>Указанное время является предпочтительным. Точный интервал обслуживания менеджер согласует с вами после получения заявки.</p>
           </div>
-        </div>
+        </section>
 
-        <div class="request-modern-section">
+        <section class="request-modern-section" id="request-step-4">
           <div class="request-modern-heading">
             <span class="request-modern-number">04</span>
             <div>
@@ -174,7 +174,7 @@
             <span>Комментарий к заявке</span>
             <textarea name="comment" rows="5" placeholder="Например: уборка после ремонта, домашние животные, сложные загрязнения или другие особенности."></textarea>
           </label>
-        </div>
+        </section>
 
         <div class="request-modern-submit">
           <div>
