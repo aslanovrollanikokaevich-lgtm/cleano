@@ -1654,3 +1654,37 @@ body.modal-open{
   font-weight:600;
   color:#a33f3f;
 }
+
+/* Refined required-field error state */
+.request-modern-field input.has-error,
+.request-modern-field select.has-error,
+.request-modern-field textarea.has-error{
+  border-color:#c46a6a;
+  background:#fffdfd;
+  box-shadow:0 0 0 3px rgba(196,106,106,.09);
+}
+.request-modern-field input.has-error:focus,
+.request-modern-field select.has-error:focus,
+.request-modern-field textarea.has-error:focus{
+  border-color:#b85b5b;
+  box-shadow:0 0 0 3px rgba(196,106,106,.13);
+}
+.request-field-error{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-top:7px;
+  padding-left:2px;
+  font-size:12.5px;
+  line-height:1.4;
+  font-weight:600;
+  color:#a85a5a;
+}
+.request-field-error::before{
+  content:'';
+  width:5px;
+  height:5px;
+  flex:0 0 5px;
+  border-radius:50%;
+  background:#c46a6a;
+}
