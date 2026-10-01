@@ -65,6 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!languagePicker.contains(event.target)) closeLanguageMenu();
   });
 
+  const propertyType = document.querySelector('#property-type');
+  const areaField = document.querySelector('#area-field');
+  const furnitureFields = document.querySelector('#furniture-fields');
+
+  const updateRequestFields = () => {
+    if (!propertyType || !areaField || !furnitureFields) return;
+    const isFurniture = propertyType.value === 'Мягкая мебель';
+    areaField.hidden = isFurniture;
+    furnitureFields.hidden = !isFurniture;
+  };
+
+  propertyType?.addEventListener('change', updateRequestFields);
+  updateRequestFields();
+
   const serviceModal = document.querySelector('#service-modal');
   const serviceModalTitle = document.querySelector('#service-modal-title');
   const serviceModalKicker = document.querySelector('#service-modal-kicker');
