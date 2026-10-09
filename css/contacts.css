@@ -52,3 +52,11 @@
 @media(max-width:850px){.contacts-hero{grid-template-columns:1fr 1fr}.contacts-connect{grid-template-columns:1fr 1fr}.contacts-city-image{height:175px}}
 @media(max-width:650px){.contacts-page{gap:17px}.contacts-hero{grid-template-columns:1fr}.contacts-hero-copy{padding:30px 25px 32px}.contacts-hero-visual{min-height:270px}.contacts-city-section{padding:25px 20px}.contacts-city-grid{grid-template-columns:1fr}.contacts-city-image{height:200px}.contacts-city-content p{min-height:0}.contacts-connect{grid-template-columns:1fr;padding:26px 21px;gap:24px}.contacts-request-card{padding:25px}.contacts-bottom-cta{padding:40px 22px}.contacts-hero h1{font-size:clamp(38px,10vw,52px)}}
 @media(prefers-reduced-motion:reduce){.contacts-button,.contacts-text-link span{transition:none}.contacts-button:hover{transform:none}}
+
+
+/* Final editorial refinements */
+.contacts-hero,.contacts-connect,.contacts-request-card{border:1px solid rgba(40,38,33,.055);box-shadow:0 8px 24px rgba(42,37,29,.035)}
+.contacts-city-card{border-radius:16px;overflow:hidden}
+.contacts-city-image{background-color:#e6e0d6}
+.contacts-connect{background:#fffefa}
+.contacts-request-card{background:#eeebe4}
