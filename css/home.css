@@ -78,3 +78,9 @@
 .home-steps>div>span{border-radius:50%;background:#e7e2d8;color:#34332f}
 .home-meta-mark{background:var(--cleano-blue)}
 @media(max-width:650px){.home-hero{border-radius:17px}.home-service-card{border-radius:13px}}
+
+
+/* Brand blue accent for primary actions */
+.home-button:not(.home-button-light){background:#1c5bed;color:#fff}
+.home-button:not(.home-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.home-button-light:hover{background:#edf2ff;color:#1c5bed}
