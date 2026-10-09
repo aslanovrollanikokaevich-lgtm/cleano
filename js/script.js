@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const invalid = fields.filter(([field]) => field && !field.value.trim());
     const phoneField = requestForm.querySelector('[name="phone"]');
     if (phoneField?.value.trim()) {
-      const digits = phoneField.value.replace(/\\D/g, '');
+      const digits = phoneField.value.replace(/\D/g, '');
       if (digits.length < 10 || digits.length > 15) {
         invalid.push([phoneField, 'Проверьте номер: укажите от 10 до 15 цифр с кодом страны.']);
       }
