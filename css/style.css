@@ -1908,3 +1908,12 @@ body{background:var(--cleano-paper);color:var(--cleano-ink);font-family:Inter,"H
 @media(prefers-reduced-motion:reduce){
  .city-menu button,.language-menu button{transition:none}
 }
+
+
+/* Brand blue accents — keep the warm minimal palette intact */
+:root{--cleano-blue:#1c5bed;--cleano-blue-hover:#1648c5;--cleano-blue-soft:#edf2ff}
+.home-button:not(.home-button-light),.catalog-button:not(.catalog-button-light),.about-button:not(.about-button-light),.service-button,.service-modal-cta,.reviews-button:not(.reviews-button-light),.contacts-button:not(.contacts-button-light){background:var(--cleano-blue);color:#fff}
+.home-button:not(.home-button-light):hover,.catalog-button:not(.catalog-button-light):hover,.about-button:not(.about-button-light):hover,.service-button:hover,.service-modal-cta:hover,.reviews-button:not(.reviews-button-light):hover,.contacts-button:not(.contacts-button-light):hover{background:var(--cleano-blue-hover);box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.home-button-light:hover,.catalog-button-light:hover,.about-button-light:hover,.reviews-button-light:hover,.contacts-button-light:hover{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
+.navigation a[aria-current="page"]::after{background:var(--cleano-blue)}
+.city-button:focus-visible,.language-button:focus-visible,.navigation a:focus-visible{outline:3px solid rgba(28,91,237,.3);outline-offset:3px}
