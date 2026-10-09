@@ -66,3 +66,37 @@
 .contacts-button:not(.contacts-button-light){background:#1c5bed;color:#fff}
 .contacts-button:not(.contacts-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
 .contacts-button-light:hover{background:#edf2ff;color:#1c5bed}
+
+
+/* Final contacts page consistency pass */
+.contacts-hero,.contacts-city-section,.contacts-connect,.contacts-request-card,.contacts-bottom-cta{
+  border-radius:var(--cleano-radius)
+}
+.contacts-hero,.contacts-city-section,.contacts-connect,.contacts-request-card{
+  border-color:var(--cleano-line);box-shadow:var(--cleano-shadow)
+}
+.contacts-hero,.contacts-city-section,.contacts-request-card{background:var(--cleano-surface)}
+.contacts-hero h1,.contacts-section-heading h2,.contacts-connect h2,.contacts-bottom-cta h2,.contacts-request-card h3{
+  font-family:Georgia,"Times New Roman",serif;font-weight:500
+}
+.contacts-hero h1,.contacts-section-heading h2,.contacts-connect h2{color:var(--cleano-ink)}
+.contacts-hero-copy>p,.contacts-section-heading>p,.contacts-connect-copy>p,.contacts-city-content p,.contacts-request-card>p{color:var(--cleano-body)}
+.contacts-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;
+  padding:12px 20px;border:1px solid transparent;border-radius:999px;font-family:inherit;
+  font-size:13px;font-weight:650;text-decoration:none;transition:background .18s ease,transform .18s ease,box-shadow .18s ease
+}
+.contacts-button:not(.contacts-button-light){background:var(--cleano-blue);color:#fff}
+.contacts-button:not(.contacts-button-light):hover{background:var(--cleano-blue-hover);transform:translateY(-1px);box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.contacts-button-light{background:var(--cleano-surface);color:var(--cleano-ink)}
+.contacts-button-light:hover{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
+.contacts-connect{background:var(--cleano-surface)}
+.contacts-contact-icon,.contacts-card-icon{background:var(--cleano-blue)}
+.contacts-text-link{color:var(--cleano-ink)}
+.contacts-text-link:hover{color:var(--cleano-blue)}
+.contacts-city-card{border-color:var(--cleano-line);border-radius:16px}
+.contacts-bottom-cta{background:var(--cleano-ink)}
+@media(max-width:650px){
+  .contacts-hero,.contacts-city-section,.contacts-connect,.contacts-request-card,.contacts-bottom-cta{border-radius:17px}
+}
+@media(prefers-reduced-motion:reduce){.contacts-button,.contacts-text-link span{transition:none}.contacts-button:hover{transform:none}}
