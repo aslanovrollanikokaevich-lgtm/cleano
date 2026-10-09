@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const saved = safeGet(storageKey);
     const option = saved && menu.querySelector(`[${attribute}="${saved}"]`);
     if (option) button.textContent = option.textContent;
+    menu.querySelectorAll('[role="option"]').forEach((item) => {
+      item.setAttribute('aria-selected', String(item === option || (!option && item.textContent.trim() === button.textContent.trim())));
+    });
   };
   restoreChoice(cityButton, cityMenu, 'data-city', 'cleano-city');
   restoreChoice(languageButton, languageMenu, 'data-language', 'cleano-language');
