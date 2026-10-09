@@ -37,7 +37,6 @@
 @media(max-width:600px){.catalog-page{gap:17px}.catalog-hero{grid-template-columns:1fr}.catalog-hero-copy{padding:30px 25px 32px}.catalog-hero-image{min-height:260px}.catalog-hero h1{font-size:clamp(38px,10vw,52px)}.catalog-overview{padding:24px}.catalog-service-new,.catalog-service-new.reverse{grid-template-columns:1fr}.catalog-service-new.reverse .catalog-service-new-image{order:0}.catalog-service-new-image{min-height:230px}.catalog-service-new-copy{padding:27px 24px}.catalog-service-new h2{font-size:30px}.catalog-bottom-cta{align-items:flex-start;flex-direction:column;padding:29px 23px}}
 @media(prefers-reduced-motion:reduce){.catalog-button{transition:none}.catalog-button:hover{transform:none}}
 
-
 /* Final editorial refinements */
 .catalog-hero{border:1px solid rgba(40,38,33,.045)}
 .catalog-hero-image,.catalog-service-new-image{background-color:#e6e0d6}
@@ -53,12 +52,9 @@
  .catalog-service-new:hover .catalog-service-new-image{filter:saturate(.94)}
 }
 
-
 /* Brand blue accent for primary actions */
 .catalog-button:not(.catalog-button-light){background:#1c5bed;color:#fff}
 .catalog-button:not(.catalog-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
-.catalog-button-light:hover{background:#edf2ff;color:#1c5bed}
-
 
 /* Final catalog consistency, responsive and modal polish */
 .catalog-hero,.catalog-service-new,.catalog-overview,.catalog-bottom-cta{
