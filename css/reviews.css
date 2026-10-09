@@ -71,3 +71,9 @@
 .reviews-empty-card,.reviews-process-card,.reviews-work-section{border:1px solid rgba(40,38,33,.055);box-shadow:0 8px 24px rgba(42,37,29,.035)}
 .reviews-work-image{background-color:#e6e0d6}
 .reviews-cta{background:#292923}
+
+
+/* Brand blue accent for primary actions */
+.reviews-button:not(.reviews-button-light){background:#1c5bed;color:#fff}
+.reviews-button:not(.reviews-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.reviews-button-light:hover{background:#edf2ff;color:#1c5bed}
