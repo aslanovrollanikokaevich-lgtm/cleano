@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!propertyType || !areaField || !furnitureFields) return;
     const isFurniture = propertyType.value === 'Мягкая мебель';
     areaField.hidden = isFurniture;
+    const areaInput = areaField.querySelector('input[name="area"]');
+    if (areaInput) areaInput.required = !isFurniture;
     furnitureFields.hidden = !isFurniture;
   };
 
