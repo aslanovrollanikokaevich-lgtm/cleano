@@ -8,7 +8,7 @@
 .contacts-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:14px 21px;border:0;border-radius:10px;background:#292929;color:#fff;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
 .contacts-button:hover{background:#414141;transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.14)}
 .contacts-hero-note{margin-top:17px;color:#999;font-size:11px;line-height:1.5}
-.contacts-hero-visual{position:relative;min-height:440px;background:#dcd9d2 url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat}
+.contacts-hero-visual{position:relative;min-height:440px;background:#dcd9d2 url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat}
 .contacts-hero-visual:after{position:absolute;inset:45% 0 0;content:"";background:linear-gradient(transparent,rgba(0,0,0,.4))}
 .contacts-visual-caption{position:absolute;z-index:1;right:22px;bottom:22px;left:22px;display:flex;align-items:center;gap:9px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.02em}
 .contacts-visual-dot{width:7px;height:7px;border-radius:50%;background:#fff}
