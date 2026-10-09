@@ -1,0 +1,54 @@
+/* Contacts page — clean editorial layout */
+.contacts-page{display:flex;flex-direction:column;gap:26px}
+.contacts-hero{display:grid;grid-template-columns:1.04fr .96fr;min-height:440px;overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.contacts-hero-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(30px,4.5vw,64px)}
+.contacts-eyebrow{display:block;margin-bottom:15px;color:#858585;font-size:10px;font-weight:750;letter-spacing:.17em;line-height:1.6}
+.contacts-hero h1{max-width:590px;margin:0 0 18px;color:#222;font-size:clamp(38px,4.7vw,62px);line-height:1.02;letter-spacing:-.05em}
+.contacts-hero-copy>p,.contacts-section-heading>p,.contacts-connect-copy>p{max-width:510px;margin:0 0 25px;color:#6f6f6f;font-size:15px;line-height:1.8}
+.contacts-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:14px 21px;border:0;border-radius:10px;background:#292929;color:#fff;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.contacts-button:hover{background:#414141;transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.14)}
+.contacts-hero-note{margin-top:17px;color:#999;font-size:11px;line-height:1.5}
+.contacts-hero-visual{position:relative;min-height:440px;background:#dcd9d2 url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat}
+.contacts-hero-visual:after{position:absolute;inset:45% 0 0;content:"";background:linear-gradient(transparent,rgba(0,0,0,.4))}
+.contacts-visual-caption{position:absolute;z-index:1;right:22px;bottom:22px;left:22px;display:flex;align-items:center;gap:9px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.02em}
+.contacts-visual-dot{width:7px;height:7px;border-radius:50%;background:#fff}
+.contacts-city-section{padding:clamp(28px,3.8vw,48px);border-radius:22px;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.contacts-section-heading{max-width:700px;margin-bottom:28px}
+.contacts-section-heading h2,.contacts-connect h2,.contacts-bottom-cta h2{margin:0 0 13px;color:#242424;font-size:clamp(29px,3.5vw,42px);line-height:1.1;letter-spacing:-.04em}
+.contacts-section-heading>p{max-width:630px;margin-bottom:0}
+.contacts-city-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contacts-city-card{overflow:hidden;border:1px solid #ecebea;border-radius:16px;background:#fff}
+.contacts-city-image{position:relative;height:205px;background-color:#ddd;background-position:center;background-size:cover}
+.contacts-city-image:after{position:absolute;inset:0;content:"";background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.36))}
+.contacts-city-almaty{background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85')}
+.contacts-city-astana{background-image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85')}
+.contacts-city-image>span{position:absolute;z-index:1;bottom:17px;left:20px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.16em}
+.contacts-city-content{padding:24px}
+.contacts-city-tag{color:#929292;font-size:10px;font-weight:700;letter-spacing:.15em}
+.contacts-city-content h3{margin:8px 0 9px;color:#252525;font-size:28px;letter-spacing:-.035em}
+.contacts-city-content p{min-height:48px;margin:0 0 19px;color:#777;font-size:14px;line-height:1.7}
+.contacts-text-link{display:inline-flex;align-items:center;gap:12px;color:#292929;text-decoration:none;font-size:13px;font-weight:700}
+.contacts-text-link span{transition:transform .2s ease}
+.contacts-text-link:hover span{transform:translate(3px,-3px)}
+.contacts-connect{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:clamp(28px,4vw,50px);border-radius:22px;background:#f2f1ee}
+.contacts-connect-copy>p{max-width:570px;margin-bottom:23px}
+.contacts-contact-row{display:grid;grid-template-columns:38px 1fr;gap:13px;padding:17px 0;border-top:1px solid #deddd9}
+.contacts-contact-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#292929;color:#fff;font-size:10px;font-weight:700}
+.contacts-contact-row strong{display:block;margin:1px 0 5px;color:#303030;font-size:14px}
+.contacts-contact-row p{margin:0;color:#777;font-size:13px;line-height:1.6}
+.contacts-request-card{padding:clamp(27px,3.2vw,40px);border-radius:18px;background:#fff;box-shadow:0 7px 25px rgba(0,0,0,.05)}
+.contacts-card-kicker{color:#929292;font-size:10px;font-weight:750;letter-spacing:.16em}
+.contacts-card-icon{display:grid;place-items:center;width:48px;height:48px;margin:27px 0 20px;border-radius:14px;background:#292929;color:#fff;font-size:24px}
+.contacts-request-card h3{margin:0 0 11px;color:#252525;font-size:27px;line-height:1.15;letter-spacing:-.035em}
+.contacts-request-card>p{margin:0 0 22px;color:#777;font-size:14px;line-height:1.75}
+.contacts-button-dark{width:100%;box-sizing:border-box}
+.contacts-card-footnote{display:block;margin-top:18px;color:#999;font-size:11px;line-height:1.65}
+.contacts-bottom-cta{display:flex;flex-direction:column;align-items:center;padding:clamp(38px,5vw,62px) 28px;border-radius:22px;background:#292929;text-align:center}
+.contacts-bottom-cta .contacts-eyebrow{color:#bdbdbd}
+.contacts-bottom-cta h2{max-width:740px;color:#fff}
+.contacts-bottom-cta p{max-width:590px;margin:0 0 25px;color:#d0d0d0;font-size:15px;line-height:1.75}
+.contacts-button-light{background:#fff;color:#292929}
+.contacts-button-light:hover{background:#ececec}
+@media(max-width:850px){.contacts-hero{grid-template-columns:1fr 1fr}.contacts-connect{grid-template-columns:1fr 1fr}.contacts-city-image{height:175px}}
+@media(max-width:650px){.contacts-page{gap:17px}.contacts-hero{grid-template-columns:1fr}.contacts-hero-copy{padding:30px 25px 32px}.contacts-hero-visual{min-height:270px}.contacts-city-section{padding:25px 20px}.contacts-city-grid{grid-template-columns:1fr}.contacts-city-image{height:200px}.contacts-city-content p{min-height:0}.contacts-connect{grid-template-columns:1fr;padding:26px 21px;gap:24px}.contacts-request-card{padding:25px}.contacts-bottom-cta{padding:40px 22px}.contacts-hero h1{font-size:clamp(38px,10vw,52px)}}
+@media(prefers-reduced-motion:reduce){.contacts-button,.contacts-text-link span{transition:none}.contacts-button:hover{transform:none}}
