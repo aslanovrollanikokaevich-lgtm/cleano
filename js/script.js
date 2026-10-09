@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isOpen) {
       closeCityMenu();
     } else {
+      closeLanguageMenu();
       cityMenu.classList.add('is-open');
       cityButton.setAttribute('aria-expanded', 'true');
       cityMenu.setAttribute('aria-hidden', 'false');
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     syncRequestCity(option.dataset.city);
     cityMenu.querySelectorAll('[role="option"]').forEach((item) => item.setAttribute('aria-selected', String(item === option)));
     closeCityMenu();
+    cityButton.focus();
   });
 
   const closeLanguageMenu = () => {
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isOpen) {
       closeLanguageMenu();
     } else {
+      closeCityMenu();
       languageMenu.classList.add('is-open');
       languageButton.setAttribute('aria-expanded', 'true');
       languageMenu.setAttribute('aria-hidden', 'false');
@@ -92,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     safeSet('cleano-language', option.dataset.language);
     languageMenu.querySelectorAll('[role="option"]').forEach((item) => item.setAttribute('aria-selected', String(item === option)));
     closeLanguageMenu();
+    languageButton.focus();
   });
 
   document.addEventListener('click', (event) => {
@@ -108,6 +112,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cityWasOpen) cityButton.focus();
     else if (languageWasOpen) languageButton.focus();
   });
+
+  // Keyboard support for the custom dropdowns.
+  const wireMenuKeyboard = (button, menu, closeMenu) => {
+    const getOptions = () => Array.from(menu.querySelectorAll('[role="option"]'));
+    button.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+      event.preventDefault();
+      closeLanguageMenu();
+      closeCityMenu();
+      menu.classList.add('is-open');
+      button.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+      const options = getOptions();
+      const selected = options.findIndex((option) => option.getAttribute('aria-selected') === 'true');
+      const target = event.key === 'ArrowDown'
+        ? (selected >= 0 ? selected : 0)
+        : (selected >= 0 ? selected : options.length - 1);
+      options[target]?.focus();
+    });
+    menu.addEventListener('keydown', (event) => {
+      const options = getOptions();
+      const index = options.indexOf(document.activeElement);
+      let next = index;
+      if (event.key === 'ArrowDown') next = (index + 1) % options.length;
+      else if (event.key === 'ArrowUp') next = (index - 1 + options.length) % options.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = options.length - 1;
+      else if (event.key === 'Escape') {
+        event.preventDefault();
+        closeMenu();
+        button.focus();
+        return;
+      } else {
+        return;
+      }
+      event.preventDefault();
+      options[next]?.focus();
+    });
+  };
+
+  wireMenuKeyboard(cityButton, cityMenu, closeCityMenu);
+  wireMenuKeyboard(languageButton, languageMenu, closeLanguageMenu);
 
   const propertyType = document.querySelector('#property-type');
   const dateField = document.querySelector('input[name="date"]');
