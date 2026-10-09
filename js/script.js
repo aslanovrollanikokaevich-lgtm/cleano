@@ -278,7 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
       prep: 'Минимальная',
       prepNote: 'Достаточно убрать личные вещи, которые не должны перемещаться или обрабатываться.',
       note: 'Состав работ можно адаптировать под квартиру. Если помещение сильно загрязнено или требуется уборка после ремонта, объём и стоимость согласовываются отдельно до начала работ.',
-      slides: ['Общий вид квартиры', 'Кухня и рабочие поверхности', 'Санузел и детали уборки']
+      slides: [
+        { label: 'Светлый интерьер квартиры', alt: 'Светлый интерьер квартиры', image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Специалист за уборкой', alt: 'Специалист выполняет уборку пола в жилом помещении', image: 'https://images.unsplash.com/photo-1758272421516-9593de0fb5bf?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Современная гостиная', alt: 'Современная гостиная с аккуратной мебелью', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85' }
+      ]
     },
     houses: {
       kicker: 'Уборка частных домов',
@@ -307,7 +311,11 @@ document.addEventListener('DOMContentLoaded', () => {
       prep: 'По согласованию',
       prepNote: 'Перед визитом желательно определить зоны, которые входят в уборку, и убрать ценные личные вещи.',
       note: 'Для домов большой площади или объектов со сложным состоянием сначала желательно уточнить детали с менеджером. Это позволяет заранее определить необходимый состав работ и время.',
-      slides: ['Жилая зона дома', 'Кухня', 'Лестница и дополнительные помещения']
+      slides: [
+        { label: 'Современный частный дом', alt: 'Экстерьер современного частного дома', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Уютный жилой интерьер', alt: 'Светлый интерьер жилого дома', image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Просторное жилое пространство', alt: 'Просторный современный интерьер', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56c0a?auto=format&fit=crop&w=1400&q=85' }
+      ]
     },
     commercial: {
       kicker: 'Уборка коммерческих помещений',
@@ -336,7 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
       prep: 'Минимальная',
       prepNote: 'Заранее согласовываются рабочие зоны, график доступа и особенности помещения.',
       note: 'Для бизнеса особенно важен график: уборку можно планировать до открытия, после закрытия или в другое удобное время. Точный состав работ фиксируется до начала обслуживания.',
-      slides: ['Офисное пространство', 'Коммерческая зона', 'Санитарная зона']
+      slides: [
+        { label: 'Офисное пространство', alt: 'Современное офисное пространство', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Уборка офисного помещения', alt: 'Специалист выполняет уборку пола в офисе', image: 'https://images.unsplash.com/photo-1781637590564-01c65dbf2039?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Рабочая зона', alt: 'Организованная рабочая зона в офисе', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85' }
+      ]
     },
     furniture: {
       kicker: 'Химчистка мягкой мебели',
@@ -365,7 +377,11 @@ document.addEventListener('DOMContentLoaded', () => {
       prep: 'Желательна',
       prepNote: 'Нужно обеспечить доступ к мебели, электричеству и, при необходимости, воде.',
       note: 'Результат зависит от материала обивки, возраста и характера загрязнения. Не каждое пятно или запах можно удалить полностью, поэтому специалист оценивает риски до начала работы.',
-      slides: ['Диван до и после обработки', 'Обработка обивки', 'Результат химчистки']
+      slides: [
+        { label: 'Диван в современной гостиной', alt: 'Диван в современной гостиной', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Мягкая мебель', alt: 'Кресло и мягкая мебель в интерьере', image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1400&q=85' },
+        { label: 'Мебель в жилом интерьере', alt: 'Мягкая мебель в светлой гостиной', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85' }
+      ]
     }
   };
 
@@ -379,11 +395,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const renderGallery = (slides) => {
     if (!galleryTrack || !galleryDots) return;
-    galleryTrack.innerHTML = slides.map((label, index) =>
-      '<div class="service-gallery-slide' + (index === 0 ? ' is-active' : '') + '"><span>Фото</span><small>' + label + '</small></div>'
+    galleryTrack.innerHTML = slides.map((slide, index) =>
+      '<div class="service-gallery-slide' + (index === 0 ? ' is-active' : '') + '" aria-hidden="' + (index !== 0) + '">' +
+      '<img src="' + slide.image + '" alt="' + slide.alt + '" loading="' + (index === 0 ? 'eager' : 'lazy') + '" decoding="async">' +
+      '<div class="service-gallery-caption"><span>Иллюстративное фото</span><small>' + slide.label + '</small></div></div>'
     ).join('');
-    galleryDots.innerHTML = slides.map((_, index) =>
-      '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-gallery-index="' + index + '" aria-label="Фото ' + (index + 1) + '"></button>'
+    galleryDots.innerHTML = slides.map((slide, index) =>
+      '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-gallery-index="' + index + '" aria-label="Показать фото: ' + slide.label + '" aria-pressed="' + (index === 0) + '"></button>'
     ).join('');
     currentSlide = 0;
   };
@@ -393,8 +411,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = galleryDots?.querySelectorAll('[data-gallery-index]');
     if (!slides?.length) return;
     currentSlide = (index + slides.length) % slides.length;
-    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === currentSlide));
-    dots?.forEach((dot, i) => dot.classList.toggle('is-active', i === currentSlide));
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === currentSlide);
+      slide.setAttribute('aria-hidden', String(i !== currentSlide));
+    });
+    dots?.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === currentSlide);
+      dot.setAttribute('aria-pressed', String(i === currentSlide));
+    });
   };
 
   const closeServiceModal = () => {
