@@ -86,3 +86,15 @@
 @media(prefers-reduced-motion:reduce){
   .request-page .request-modern-field input,.request-page .request-modern-field select,.request-page .request-modern-field textarea,.request-page .request-modern-submit button{transition:none}
 }
+
+
+/* Final editorial refinements */
+.request-page .request-modern-section{border:1px solid rgba(40,38,33,.055);box-shadow:0 8px 24px rgba(42,37,29,.035)}
+.request-page .request-modern-number{border-radius:50%;background:#e9e4da;color:#37352f}
+.request-page .request-progress{border:1px solid #e8e3da;border-radius:14px;background:#fffefa}
+.request-page .request-progress-item span{border-radius:50%}
+.request-page .request-progress-item.is-active span{background:#292923}
+.request-page .request-modern-note{border-radius:12px;background:#f0ede6}
+.request-page .request-modern-submit{background:#292923}
+.request-page .request-consent input{accent-color:#292923}
+@media(max-width:600px){.request-page .request-modern-section{border-radius:15px}}
