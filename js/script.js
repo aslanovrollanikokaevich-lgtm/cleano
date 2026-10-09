@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (targetFile === currentFile || (!currentFile && targetFile === 'index.html')) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        link.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+      }
     } else {
       link.classList.remove('active');
       link.removeAttribute('aria-current');
