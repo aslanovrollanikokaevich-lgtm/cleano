@@ -77,3 +77,35 @@
 .reviews-button:not(.reviews-button-light){background:#1c5bed;color:#fff}
 .reviews-button:not(.reviews-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
 .reviews-button-light:hover{background:#edf2ff;color:#1c5bed}
+
+
+/* Final reviews page consistency pass */
+.reviews-hero,.reviews-empty-card,.reviews-process-card,.reviews-work-section,.reviews-cta{
+  border-radius:var(--cleano-radius)
+}
+.reviews-hero,.reviews-empty-card,.reviews-process-card,.reviews-work-section{
+  border-color:var(--cleano-line);background:var(--cleano-surface);box-shadow:var(--cleano-shadow)
+}
+.reviews-hero h1,.reviews-empty-card h2,.reviews-process-card h2,.reviews-work-heading h2,.reviews-cta h2{
+  font-family:Georgia,"Times New Roman",serif;font-weight:500
+}
+.reviews-hero h1,.reviews-empty-card h2,.reviews-process-card h2,.reviews-work-heading h2{color:var(--cleano-ink)}
+.reviews-hero-copy p,.reviews-empty-card p,.reviews-process-card>p,.reviews-work-heading p{color:var(--cleano-body)}
+.reviews-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;
+  padding:12px 20px;border-radius:999px;font-family:inherit;font-size:13px;font-weight:650;
+  text-decoration:none;transition:background .18s ease,transform .18s ease,box-shadow .18s ease
+}
+.reviews-button:not(.reviews-button-light){background:var(--cleano-blue);color:#fff}
+.reviews-button:not(.reviews-button-light):hover{background:var(--cleano-blue-hover);transform:translateY(-1px);box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.reviews-button-light{background:var(--cleano-surface);color:var(--cleano-ink)}
+.reviews-button-light:hover{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
+.reviews-process-item>span{background:var(--cleano-blue)}
+.reviews-quote-mark{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
+.reviews-work-image{border-radius:14px;background:#e6e0d6}
+.reviews-work-label{background:var(--cleano-sand);color:var(--cleano-muted)}
+.reviews-cta{background:var(--cleano-ink)}
+@media(max-width:680px){
+  .reviews-hero,.reviews-empty-card,.reviews-process-card,.reviews-work-section,.reviews-cta{border-radius:17px}
+}
+@media(prefers-reduced-motion:reduce){.reviews-button{transition:none}.reviews-button:hover{transform:none}}
