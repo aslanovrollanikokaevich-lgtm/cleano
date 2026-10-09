@@ -98,3 +98,10 @@
 .request-page .request-modern-submit{background:#292923}
 .request-page .request-consent input{accent-color:#292923}
 @media(max-width:600px){.request-page .request-modern-section{border-radius:15px}}
+
+
+/* Brand blue accent for form focus and submission */
+.request-page .request-modern-field input:focus,.request-page .request-modern-field select:focus,.request-page .request-modern-field textarea:focus{border-color:#1c5bed;box-shadow:0 0 0 3px rgba(28,91,237,.13)}
+.request-page .request-modern-submit button{background:#1c5bed;color:#fff}
+.request-page .request-modern-submit button:hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.request-page .request-consent input{accent-color:#1c5bed}
