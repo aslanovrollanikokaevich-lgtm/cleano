@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   restoreChoice(cityButton, cityMenu, 'data-city', 'cleano-city');
   restoreChoice(languageButton, languageMenu, 'data-language', 'cleano-language');
 
+  const syncRequestCity = (cityLabel) => {
+    const cityField = document.querySelector('select[name="city"]');
+    if (cityField) cityField.value = cityLabel === 'Астана' ? 'astana' : 'almaty';
+  };
+  syncRequestCity(cityButton.textContent.trim());
+
   const currentFile = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navigation a').forEach((link) => {
     const targetFile = link.getAttribute('href').split('#')[0];
@@ -56,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!option) return;
     cityButton.textContent = option.dataset.city;
     safeSet('cleano-city', option.dataset.city);
+    syncRequestCity(option.dataset.city);
     cityMenu.querySelectorAll('[role="option"]').forEach((item) => item.setAttribute('aria-selected', String(item === option)));
     closeCityMenu();
   });
@@ -103,6 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const propertyType = document.querySelector('#property-type');
+  const dateField = document.querySelector('input[name="date"]');
+  const getLocalDate = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+  if (dateField) dateField.min = getLocalDate();
   const areaField = document.querySelector('#area-field');
   const furnitureFields = document.querySelector('#furniture-fields');
 
@@ -157,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearFieldError = (field) => {
     field.classList.remove('has-error');
     field.removeAttribute('aria-invalid');
+    field.removeAttribute('aria-describedby');
     const error = field.closest('.request-modern-field')?.querySelector('.request-field-error');
     error?.remove();
   };
@@ -169,7 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!wrapper) return;
     const error = document.createElement('small');
     error.className = 'request-field-error';
+    error.id = `${field.name || 'field'}-error`;
     error.textContent = message;
+    field.setAttribute('aria-describedby', error.id);
     wrapper.appendChild(error);
   };
 
@@ -195,6 +214,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const invalid = fields.filter(([field]) => field && !field.value.trim());
+    const phoneField = requestForm.querySelector('[name="phone"]');
+    if (phoneField?.value.trim()) {
+      const digits = phoneField.value.replace(/\\D/g, '');
+      if (digits.length < 10 || digits.length > 15) {
+        invalid.push([phoneField, 'Проверьте номер: укажите от 10 до 15 цифр с кодом страны.']);
+      }
+    }
+    if (dateField?.value && dateField.value < getLocalDate()) {
+      invalid.push([dateField, 'Выберите сегодняшнюю или будущую дату.']);
+    }
     requestForm.querySelectorAll('.request-modern-field input, .request-modern-field select').forEach((field) => {
       if (!invalid.some(([item]) => item === field)) clearFieldError(field);
     });
