@@ -144,3 +144,38 @@
 @media(prefers-reduced-motion:reduce){
   .request-page .request-progress-item,.request-page .request-progress-item span,.request-page .request-modern-submit button{transition:none}
 }
+
+
+/* Final request form consistency pass */
+.request-page .request-intro,.request-page .request-card-modern{border-color:var(--cleano-line);box-shadow:var(--cleano-shadow)}
+.request-page .request-intro{background:var(--cleano-surface)}
+.request-page .request-intro h1,.request-page .request-modern-heading h2,.request-page .request-success h2{
+  font-family:Georgia,"Times New Roman",serif;font-weight:500;color:var(--cleano-ink)
+}
+.request-page .request-intro p,.request-page .request-modern-heading p{color:var(--cleano-body)}
+.request-page .request-card-modern{background:#f0ede6}
+.request-page .request-progress{border-color:var(--cleano-line);background:rgba(255,254,250,.96)}
+.request-page .request-progress-item.is-active span{background:var(--cleano-blue);color:#fff}
+.request-page .request-progress-item.is-active strong{color:var(--cleano-blue)}
+.request-page .request-modern-number{background:var(--cleano-blue-soft);border-color:#dce5ff;color:var(--cleano-blue)}
+.request-page .request-modern-section{border-color:var(--cleano-line);background:var(--cleano-surface);box-shadow:0 5px 18px rgba(42,37,29,.035)}
+.request-page .request-modern-field input,.request-page .request-modern-field select,.request-page .request-modern-field textarea{
+  font-family:inherit;border-color:var(--cleano-line);border-radius:11px;background:#fff;color:var(--cleano-ink)
+}
+.request-page .request-modern-field input:focus,.request-page .request-modern-field select:focus,.request-page .request-modern-field textarea:focus{
+  border-color:var(--cleano-blue);box-shadow:0 0 0 3px rgba(28,91,237,.13)
+}
+.request-page .request-modern-note{border-color:var(--cleano-line);background:#f6f4ef}
+.request-page .request-modern-submit{border-color:#292923;background:#292923}
+.request-page .request-modern-submit button,.request-page .request-success-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;
+  border-radius:999px;background:var(--cleano-blue);color:#fff;font-family:inherit;font-size:13px;font-weight:650
+}
+.request-page .request-modern-submit button:hover,.request-page .request-success-button:hover{background:var(--cleano-blue-hover)}
+.request-page .request-consent input{accent-color:var(--cleano-blue)}
+.request-page .request-success-icon{background:var(--cleano-blue)}
+.request-page .request-field-error{color:#a83f3f}
+@media(max-width:760px){
+  .request-page .request-intro,.request-page .request-card-modern{border-radius:17px}
+  .request-page .request-modern-submit button{width:100%}
+}
