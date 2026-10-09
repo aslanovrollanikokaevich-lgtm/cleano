@@ -387,6 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentService = null;
   let currentSlide = 0;
+  let modalReturnFocus = null;
 
   const renderList = (element, items) => {
     if (!element) return;
@@ -422,15 +423,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const closeServiceModal = () => {
-    if (!serviceModal) return;
+    if (!serviceModal || !serviceModal.classList.contains('is-open')) return;
     serviceModal.classList.remove('is-open');
     serviceModal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
+    modalReturnFocus?.focus();
   };
 
   if (serviceModal) {
     serviceModalButtons.forEach((button) => {
       button.addEventListener('click', () => {
+        modalReturnFocus = button;
         currentService = serviceData[button.dataset.serviceModal];
         if (!currentService) return;
         serviceModalKicker.textContent = currentService.kicker;
@@ -449,6 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
         serviceModal.classList.add('is-open');
         serviceModal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
+        serviceModal.querySelector('.service-modal-close')?.focus();
       });
     });
 
@@ -464,10 +468,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeServiceModal();
       if (!serviceModal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        closeServiceModal();
+        return;
+      }
       if (event.key === 'ArrowLeft') showSlide(currentSlide - 1);
       if (event.key === 'ArrowRight') showSlide(currentSlide + 1);
+
+      if (event.key === 'Tab') {
+        const focusable = [...serviceModal.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )].filter((element) => element.getClientRects().length > 0);
+        if (!focusable.length) {
+          event.preventDefault();
+          return;
+        }
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !serviceModal.contains(document.activeElement))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !serviceModal.contains(document.activeElement))) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     });
   }
 });
