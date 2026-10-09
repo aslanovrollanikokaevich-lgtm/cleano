@@ -52,3 +52,9 @@
  .catalog-service-new-image{transition:background-size .5s ease,filter .4s ease}
  .catalog-service-new:hover .catalog-service-new-image{filter:saturate(.94)}
 }
+
+
+/* Brand blue accent for primary actions */
+.catalog-button:not(.catalog-button-light){background:#1c5bed;color:#fff}
+.catalog-button:not(.catalog-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.catalog-button-light:hover{background:#edf2ff;color:#1c5bed}
