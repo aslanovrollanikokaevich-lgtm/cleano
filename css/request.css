@@ -1,0 +1,88 @@
+/* CLEANO request page — premium minimal form */
+.main-content.request-page{display:flex;flex-direction:column;gap:24px}
+.request-page .request-intro{
+  position:relative;isolation:isolate;overflow:hidden;min-height:330px;margin:0;padding:clamp(32px,5vw,62px);
+  border:1px solid #e9e7e3;border-radius:22px;background:#f7f6f3;box-shadow:0 8px 28px rgba(0,0,0,.045)
+}
+.request-page .request-intro:before{
+  position:absolute;z-index:-1;inset:0 0 0 auto;width:43%;content:"";
+  background:linear-gradient(90deg,#f7f6f3 0%,rgba(247,246,243,.28) 42%,rgba(0,0,0,.04) 100%),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat
+}
+.request-page .request-intro-copy{max-width:660px;position:relative}
+.request-eyebrow{display:block;margin-bottom:15px;color:#777;font-size:10px;font-weight:800;letter-spacing:.18em}
+.request-page .request-intro h1{max-width:620px;margin:0 0 17px;font-size:clamp(38px,4.5vw,58px);line-height:.99;letter-spacing:-.055em;color:#242424}
+.request-page .request-intro p{max-width:570px;margin:0;color:#6d6d6d;font-size:15px;line-height:1.8}
+.request-intro-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}
+.request-intro-tags span{padding:8px 11px;border:1px solid #e0ded9;border-radius:999px;background:rgba(255,255,255,.72);color:#555;font-size:11px;font-weight:650}
+.request-page .request-card-modern{padding:18px;border:1px solid #e9e7e3;border-radius:22px;background:#f3f2ef;box-shadow:0 8px 28px rgba(0,0,0,.045)}
+.request-page .request-progress{position:sticky;top:10px;z-index:20;margin:0 0 16px;padding:20px 25px;border:1px solid #e8e6e2;border-radius:15px;background:rgba(255,255,255,.96);box-shadow:0 5px 18px rgba(0,0,0,.045);backdrop-filter:blur(12px)}
+.request-page .request-progress-item{gap:10px}
+.request-page .request-progress-item span{width:32px;height:32px;background:#eeedea;color:#777}
+.request-page .request-progress-item.is-active span{background:#292929;color:#fff;box-shadow:none}
+.request-page .request-progress-item.is-active strong{color:#292929}
+.request-page .request-progress-item strong{font-size:12px;color:#8a8a8a}
+.request-page .request-progress-line{margin:0 13px;background:#e5e3df}
+.request-page .request-modern-section{margin:14px 0;padding:clamp(25px,3.3vw,38px);border:1px solid #e9e7e3;border-radius:17px;background:#fff;box-shadow:0 3px 14px rgba(0,0,0,.025);scroll-margin-top:105px}
+.request-page .request-modern-section:first-of-type{margin-top:0}
+.request-page .request-modern-heading{gap:14px;margin-bottom:25px}
+.request-page .request-modern-number{flex-basis:38px;width:38px;height:38px;border-color:#e0ded9;border-radius:12px;background:#f5f4f1;color:#555}
+.request-page .request-modern-heading h2{font-size:22px;letter-spacing:-.025em}
+.request-page .request-modern-heading p{font-size:13px;color:#858585}
+.request-page .request-modern-fields{gap:18px}
+.request-page .request-modern-fields.address-row{grid-template-columns:minmax(0,1fr) 220px}
+.request-page .request-modern-field{min-width:0;gap:8px}
+.request-page .request-modern-field>span{font-size:12px;color:#4f4f4f}
+.request-page .request-modern-field input,.request-page .request-modern-field select,.request-page .request-modern-field textarea{
+  border:1px solid #e1dfdb;border-radius:10px;background:#fbfaf8;color:#262626;font-size:14px;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease
+}
+.request-page .request-modern-field input,.request-page .request-modern-field select{height:51px;padding:0 14px}
+.request-page .request-modern-field textarea{min-height:135px;padding:14px;line-height:1.6}
+.request-page .request-modern-field input:hover,.request-page .request-modern-field select:hover,.request-page .request-modern-field textarea:hover{border-color:#bdbab4}
+.request-page .request-modern-field input:focus,.request-page .request-modern-field select:focus,.request-page .request-modern-field textarea:focus{border-color:#555;outline:0;background:#fff;box-shadow:0 0 0 3px rgba(41,41,41,.08)}
+.request-page .request-modern-field input.has-error,.request-page .request-modern-field select.has-error,.request-page .request-modern-field textarea.has-error{border-color:#b64c43;box-shadow:0 0 0 3px rgba(182,76,67,.08)}
+.request-page .request-field-error{color:#b64c43;font-size:12px;line-height:1.4}
+.request-page .request-modern-note{align-items:flex-start;gap:12px;margin-top:17px;padding:15px 16px;border:1px solid #e8e6e2;border-radius:11px;background:#f7f6f3}
+.request-page .request-modern-note span{background:#e9e7e2;color:#555}
+.request-page .request-modern-note p{font-size:12px;line-height:1.6;color:#777}
+.request-page .request-modern-submit{margin:20px 0 0;padding:clamp(23px,3.4vw,34px);border:1px solid #3a3a3a;border-radius:17px;background:#292929}
+.request-page .request-modern-submit h2{font-size:22px;letter-spacing:-.02em}
+.request-page .request-modern-submit p{max-width:580px;font-size:13px;line-height:1.7;color:#c9c9c9}
+.request-page .request-modern-submit button{min-height:51px;padding:13px 20px;border-radius:10px;background:#fff;color:#292929;font-size:13px;white-space:nowrap}
+.request-page .request-modern-submit button:hover{background:#ecebe8;transform:translateY(-1px);box-shadow:0 5px 15px rgba(0,0,0,.18)}
+.request-consent{display:flex;align-items:flex-start;gap:10px;margin:17px 2px 0;color:#555;font-size:12px;line-height:1.6;cursor:pointer}
+.request-consent input{flex:0 0 auto;width:16px;height:16px;margin:2px 0 0;accent-color:#292929}
+.request-page .request-modern-privacy{margin:9px 2px 8px;text-align:left;font-size:11px;line-height:1.6;color:#8a8a8a}
+.request-page .request-success{margin:14px 0 0;padding:clamp(35px,6vw,68px) 24px;border:1px solid #e9e7e3;border-radius:17px;box-shadow:none}
+.request-page .request-success-icon{background:#292929}
+.request-page .request-success p{font-size:15px}
+.request-page .request-success strong{max-width:620px;margin:0 auto 25px;line-height:1.6}
+.request-page .request-success-button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+@media(max-width:760px){
+  .main-content.request-page{gap:16px}
+  .request-page .request-intro{min-height:0;padding:29px 23px 30px;border-radius:18px}
+  .request-page .request-intro:before{inset:0;width:100%;opacity:.15;background-image:linear-gradient(90deg,rgba(247,246,243,.96),rgba(247,246,243,.75)),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80')}
+  .request-page .request-intro h1{max-width:520px;font-size:clamp(36px,9vw,47px)}
+  .request-page .request-intro p{font-size:14px;line-height:1.75}
+  .request-page .request-card-modern{padding:10px;border-radius:18px}
+  .request-page .request-progress{top:6px;padding:15px 14px;border-radius:13px;gap:0}
+  .request-page .request-progress-item{gap:0}
+  .request-page .request-progress-item span{width:30px;height:30px}
+  .request-page .request-progress-line{min-width:18px;margin:0 8px}
+  .request-page .request-modern-section{margin:10px 0;padding:25px 18px;border-radius:15px;scroll-margin-top:85px}
+  .request-page .request-modern-heading{gap:12px;margin-bottom:21px}
+  .request-page .request-modern-heading h2{font-size:20px}
+  .request-page .request-modern-heading p{font-size:12px}
+  .request-page .request-modern-fields.two,.request-page .request-modern-fields.address-row{grid-template-columns:1fr}
+  .request-page .request-modern-fields.address-row{margin-top:15px}
+  .request-page .request-modern-submit{flex-direction:column;align-items:stretch;margin-top:13px;padding:23px 19px}
+  .request-page .request-modern-submit button{width:100%}
+  .request-page .request-modern-privacy{font-size:10px}
+}
+@media(max-width:380px){
+  .request-page .request-progress{padding:13px 9px}
+  .request-page .request-progress-line{min-width:12px;margin:0 5px}
+  .request-page .request-progress-item span{width:27px;height:27px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+  .request-page .request-modern-field input,.request-page .request-modern-field select,.request-page .request-modern-field textarea,.request-page .request-modern-submit button{transition:none}
+}
