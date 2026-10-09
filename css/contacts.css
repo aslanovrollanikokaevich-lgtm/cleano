@@ -60,3 +60,9 @@
 .contacts-city-image{background-color:#e6e0d6}
 .contacts-connect{background:#fffefa}
 .contacts-request-card{background:#eeebe4}
+
+
+/* Brand blue accent for primary actions */
+.contacts-button:not(.contacts-button-light){background:#1c5bed;color:#fff}
+.contacts-button:not(.contacts-button-light):hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
+.contacts-button-light:hover{background:#edf2ff;color:#1c5bed}
