@@ -1917,3 +1917,104 @@ body{background:var(--cleano-paper);color:var(--cleano-ink);font-family:Inter,"H
 .home-button-light:hover,.catalog-button-light:hover,.about-button-light:hover,.reviews-button-light:hover,.contacts-button-light:hover{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
 .navigation a[aria-current="page"]::after{background:var(--cleano-blue)}
 .city-button:focus-visible,.language-button:focus-visible,.navigation a:focus-visible{outline:3px solid rgba(28,91,237,.3);outline-offset:3px}
+
+
+/* CLEANO design system — unify typography, color, surfaces and controls across every page */
+:root{
+  --cleano-paper:#f5f3ef;
+  --cleano-surface:#fffefa;
+  --cleano-ink:#252522;
+  --cleano-body:#62615c;
+  --cleano-muted:#77766f;
+  --cleano-line:#e6e2db;
+  --cleano-sand:#eae5dc;
+  --cleano-blue:#1c5bed;
+  --cleano-blue-hover:#1648c5;
+  --cleano-blue-soft:#edf2ff;
+  --cleano-radius:20px;
+  --cleano-shadow:0 12px 34px rgba(42,37,29,.055);
+}
+html,body{background:var(--cleano-paper);color:var(--cleano-ink)}
+body,button,input,select,textarea{font-family:Inter,"Helvetica Neue",Arial,sans-serif}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,.home-hero h1,.catalog-hero h1,.request-page .request-intro h1,.reviews-hero h1,.contacts-hero h1,.about-hero h1,.services-intro h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  color:var(--cleano-ink);
+  letter-spacing:-.045em;
+}
+h2,.home-section-heading h2,.home-approach-copy h2,.home-trust-heading h2,.home-final-cta h2,.catalog-service-new h2,.catalog-bottom-cta h2,.request-modern-heading h2,.request-modern-submit h2,.reviews-empty-card h2,.reviews-process-card h2,.reviews-work-heading h2,.reviews-cta h2,.contacts-section-heading h2,.contacts-connect h2,.contacts-bottom-cta h2,.about-section-heading h2,.about-direction-copy h2,.about-trust-copy h2,.about-final-cta h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+h3,.home-service-card h3,.home-trust-grid h3,.catalog-service-new h3,.reviews-process-item h3,.contacts-city-content h3,.contacts-request-card h3{
+  font-family:Inter,"Helvetica Neue",Arial,sans-serif;
+  font-weight:650;
+  letter-spacing:-.02em;
+}
+p{color:var(--cleano-body)}
+.home-eyebrow,.catalog-eyebrow,.request-eyebrow,.reviews-eyebrow,.contacts-eyebrow,.about-eyebrow,.services-eyebrow{
+  color:var(--cleano-muted);
+  font-family:Inter,"Helvetica Neue",Arial,sans-serif;
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:.15em;
+  line-height:1.6;
+}
+.home-hero,.catalog-hero,.request-page .request-intro,.reviews-hero,.contacts-hero,.about-hero{
+  background-color:var(--cleano-surface);
+  border-color:var(--cleano-line);
+  box-shadow:var(--cleano-shadow);
+}
+.home-services-section,.home-trust-section,.catalog-service-new,.about-principles,.about-process,.contacts-city-section,.contacts-connect,.reviews-empty-card,.reviews-process-card,.reviews-work-section{
+  background-color:var(--cleano-surface);
+  border-color:var(--cleano-line);
+}
+.home-service-card,.contacts-city-card,.request-page .request-modern-section{
+  border-color:var(--cleano-line);
+  background-color:var(--cleano-surface);
+}
+.home-button,.catalog-button,.about-button,.service-button,.service-modal-cta,.reviews-button,.contacts-button,.request-page .request-modern-submit button,.request-page .request-success-button{
+  min-height:48px;
+  border-radius:999px;
+  font-family:Inter,"Helvetica Neue",Arial,sans-serif;
+  font-size:13px;
+  font-weight:650;
+  letter-spacing:0;
+}
+.home-button:not(.home-button-light),.catalog-button:not(.catalog-button-light),.about-button:not(.about-button-light),.service-button,.service-modal-cta,.reviews-button:not(.reviews-button-light),.contacts-button:not(.contacts-button-light),.request-page .request-modern-submit button,.request-page .request-success-button{
+  background:var(--cleano-blue);
+  color:#fff;
+}
+.home-button:not(.home-button-light):hover,.catalog-button:not(.catalog-button-light):hover,.about-button:not(.about-button-light):hover,.service-button:hover,.service-modal-cta:hover,.reviews-button:not(.reviews-button-light):hover,.contacts-button:not(.contacts-button-light):hover,.request-page .request-modern-submit button:hover,.request-page .request-success-button:hover{
+  background:var(--cleano-blue-hover);
+  box-shadow:0 8px 20px rgba(28,91,237,.18);
+}
+.home-button-light,.catalog-button-light,.about-button-light,.reviews-button-light,.contacts-button-light{
+  background:var(--cleano-surface);
+  color:var(--cleano-ink);
+}
+.home-button-light:hover,.catalog-button-light:hover,.about-button-light:hover,.reviews-button-light:hover,.contacts-button-light:hover{
+  background:var(--cleano-blue-soft);
+  color:var(--cleano-blue);
+}
+.home-text-link,.contacts-text-link{color:var(--cleano-ink)}
+.home-text-link:hover,.contacts-text-link:hover{color:var(--cleano-blue)}
+.request-page .request-modern-field input,.request-page .request-modern-field select,.request-page .request-modern-field textarea{
+  font-family:Inter,"Helvetica Neue",Arial,sans-serif;
+  border-color:var(--cleano-line);
+  border-radius:11px;
+  color:var(--cleano-ink);
+}
+.request-page .request-modern-field input:focus,.request-page .request-modern-field select:focus,.request-page .request-modern-field textarea:focus{
+  border-color:var(--cleano-blue);
+  box-shadow:0 0 0 3px rgba(28,91,237,.13);
+}
+.request-page .request-modern-number{background:var(--cleano-blue-soft);color:var(--cleano-blue)}
+.request-page .request-progress-item.is-active span{background:var(--cleano-blue);color:#fff}
+.request-page .request-progress-item.is-active strong{color:var(--cleano-blue)}
+.site-footer{background:#252522}
+@media(prefers-reduced-motion:reduce){
+  .home-button,.catalog-button,.about-button,.service-button,.service-modal-cta,.reviews-button,.contacts-button,.request-page .request-modern-submit button,.request-page .request-success-button{transition:none}
+}
