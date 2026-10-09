@@ -65,3 +65,9 @@
  .reviews-work-image,.reviews-work-item:first-child .reviews-work-image{height:230px}
  .reviews-cta{padding:42px 24px;border-radius:16px}
 }
+
+
+/* Final editorial refinements */
+.reviews-empty-card,.reviews-process-card,.reviews-work-section{border:1px solid rgba(40,38,33,.055);box-shadow:0 8px 24px rgba(42,37,29,.035)}
+.reviews-work-image{background-color:#e6e0d6}
+.reviews-cta{background:#292923}
