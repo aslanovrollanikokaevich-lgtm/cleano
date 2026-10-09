@@ -362,9 +362,9 @@ document.addEventListener('DOMContentLoaded', () => {
       prepNote: 'Достаточно убрать личные вещи, которые не должны перемещаться или обрабатываться.',
       note: 'Состав работ можно адаптировать под квартиру. Если помещение сильно загрязнено или требуется уборка после ремонта, объём и стоимость согласовываются отдельно до начала работ.',
       slides: [
-        { label: 'Светлый интерьер квартиры', alt: 'Светлый интерьер квартиры', image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Специалист за уборкой', alt: 'Специалист выполняет уборку пола в жилом помещении', image: 'https://images.unsplash.com/photo-1758272421516-9593de0fb5bf?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Современная гостиная', alt: 'Современная гостиная с аккуратной мебелью', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85' }
+        { label: 'Светлый интерьер квартиры', alt: 'Светлый интерьер квартиры', image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Специалист за уборкой', alt: 'Специалист выполняет уборку пола в жилом помещении', image: 'https://images.unsplash.com/photo-1758272421516-9593de0fb5bf?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Современная гостиная', alt: 'Современная гостиная с аккуратной мебелью', image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1100&q=80' }
       ]
     },
     houses: {
@@ -395,9 +395,9 @@ document.addEventListener('DOMContentLoaded', () => {
       prepNote: 'Перед визитом желательно определить зоны, которые входят в уборку, и убрать ценные личные вещи.',
       note: 'Для домов большой площади или объектов со сложным состоянием сначала желательно уточнить детали с менеджером. Это позволяет заранее определить необходимый состав работ и время.',
       slides: [
-        { label: 'Современный частный дом', alt: 'Экстерьер современного частного дома', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Уютный жилой интерьер', alt: 'Светлый интерьер жилого дома', image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Просторное жилое пространство', alt: 'Просторный современный интерьер', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56c0a?auto=format&fit=crop&w=1400&q=85' }
+        { label: 'Современный частный дом', alt: 'Экстерьер современного частного дома', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Уютный жилой интерьер', alt: 'Светлый интерьер жилого дома', image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Просторное жилое пространство', alt: 'Просторный современный интерьер', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56c0a?auto=format&fit=crop&w=1100&q=80' }
       ]
     },
     commercial: {
@@ -428,9 +428,9 @@ document.addEventListener('DOMContentLoaded', () => {
       prepNote: 'Заранее согласовываются рабочие зоны, график доступа и особенности помещения.',
       note: 'Для бизнеса особенно важен график: уборку можно планировать до открытия, после закрытия или в другое удобное время. Точный состав работ фиксируется до начала обслуживания.',
       slides: [
-        { label: 'Офисное пространство', alt: 'Современное офисное пространство', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Уборка офисного помещения', alt: 'Специалист выполняет уборку пола в офисе', image: 'https://images.unsplash.com/photo-1781637590564-01c65dbf2039?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Рабочая зона', alt: 'Организованная рабочая зона в офисе', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85' }
+        { label: 'Офисное пространство', alt: 'Современное офисное пространство', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Уборка офисного помещения', alt: 'Специалист выполняет уборку пола в офисе', image: 'https://images.unsplash.com/photo-1781637590564-01c65dbf2039?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Рабочая зона', alt: 'Организованная рабочая зона в офисе', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=80' }
       ]
     },
     furniture: {
@@ -461,9 +461,9 @@ document.addEventListener('DOMContentLoaded', () => {
       prepNote: 'Нужно обеспечить доступ к мебели, электричеству и, при необходимости, воде.',
       note: 'Результат зависит от материала обивки, возраста и характера загрязнения. Не каждое пятно или запах можно удалить полностью, поэтому специалист оценивает риски до начала работы.',
       slides: [
-        { label: 'Диван в современной гостиной', alt: 'Диван в современной гостиной', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Мягкая мебель', alt: 'Кресло и мягкая мебель в интерьере', image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1400&q=85' },
-        { label: 'Мебель в жилом интерьере', alt: 'Мягкая мебель в светлой гостиной', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85' }
+        { label: 'Диван в современной гостиной', alt: 'Диван в современной гостиной', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Мягкая мебель', alt: 'Кресло и мягкая мебель в интерьере', image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1100&q=80' },
+        { label: 'Мебель в жилом интерьере', alt: 'Мягкая мебель в светлой гостиной', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=80' }
       ]
     }
   };
