@@ -65,3 +65,16 @@
 @media(max-width:650px){.home-page{gap:17px}.home-hero{grid-template-columns:1fr}.home-hero-copy{padding:30px 25px 32px}.home-hero-image{min-height:300px}.home-hero h1{font-size:clamp(39px,10vw,53px)}.home-services-section,.home-trust-section{padding:25px 20px}.home-section-heading{align-items:flex-start}.home-section-heading h2,.home-approach-copy h2,.home-trust-heading h2,.home-final-cta h2{font-size:30px}.home-service-grid{grid-template-columns:1fr}.home-service-card{grid-template-columns:.85fr 1.15fr;min-height:200px}.home-service-image{min-height:200px}.home-service-card-copy{padding:17px}.home-service-card-copy>span{font-size:8px}.home-service-card p{font-size:11px}.home-approach{grid-template-columns:1fr}.home-approach-image{min-height:260px}.home-approach-copy{padding:28px 22px}.home-trust-grid{grid-template-columns:1fr}.home-trust-grid article,.home-trust-grid article:first-child{padding:18px 0}.home-trust-grid article+article{border-top:1px solid #e7e7e7;border-left:0}.home-final-cta{padding:40px 22px}}
 @media(max-width:390px){.home-service-card{grid-template-columns:1fr}.home-service-image{min-height:175px}.home-service-card-copy{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.home-service-card,.home-button,.home-text-link span{transition:none}.home-service-card:hover,.home-button:hover{transform:none}}
+
+
+/* Final editorial refinements */
+.home-hero{border:1px solid rgba(40,38,33,.045)}
+.home-hero-image,.home-approach-image,.home-service-image{background-color:#e6e0d6}
+.home-hero-image{background-position:center 44%}
+.home-service-card{border-color:#e8e4dc;border-radius:16px}
+.home-service-card:hover{box-shadow:0 16px 32px rgba(42,37,29,.09)}
+.home-service-image{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.home-service-card:hover .home-service-image{transform:scale(1.025)}
+.home-steps>div>span{border-radius:50%;background:#e7e2d8;color:#34332f}
+.home-meta-mark{background:var(--cleano-blue)}
+@media(max-width:650px){.home-hero{border-radius:17px}.home-service-card{border-radius:13px}}
