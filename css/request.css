@@ -105,3 +105,42 @@
 .request-page .request-modern-submit button{background:#1c5bed;color:#fff}
 .request-page .request-modern-submit button:hover{background:#1648c5;box-shadow:0 8px 20px rgba(28,91,237,.18)}
 .request-page .request-consent input{accent-color:#1c5bed}
+
+
+/* Request form polish — clearer progress, focus and validation states */
+.request-page .request-progress-item{border-radius:10px;transition:background .18s ease,color .18s ease}
+.request-page .request-progress-item:hover{background:#f3f5fc}
+.request-page .request-progress-item span{transition:background .18s ease,color .18s ease,box-shadow .18s ease}
+.request-page .request-progress-item.is-active span{background:#1c5bed;color:#fff;box-shadow:0 0 0 4px rgba(28,91,237,.1)}
+.request-page .request-progress-item.is-active strong{color:#1c5bed}
+.request-page .request-progress-line{background:#e1e7f5}
+.request-page .request-modern-number{border-color:#e0e7fa;background:#edf2ff;color:#1c5bed}
+.request-page .request-modern-heading h2{color:#252522}
+.request-page .request-modern-field>span{font-weight:650}
+.request-page .request-modern-field input:focus-visible,
+.request-page .request-modern-field select:focus-visible,
+.request-page .request-modern-field textarea:focus-visible{outline:2px solid rgba(28,91,237,.24);outline-offset:1px}
+.request-page .request-modern-field input.has-error,
+.request-page .request-modern-field select.has-error,
+.request-page .request-modern-field textarea.has-error{border-color:#b64c43;box-shadow:0 0 0 3px rgba(182,76,67,.08)}
+.request-page .request-field-error{display:block;margin-top:2px}
+.request-page .request-modern-submit button{min-height:52px;border-radius:999px;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.request-page .request-modern-submit button:focus-visible,
+.request-page .request-progress-item:focus-visible,
+.request-page .request-success-button:focus-visible{outline:3px solid rgba(28,91,237,.32);outline-offset:3px}
+.request-page .request-success-icon{background:#1c5bed}
+.request-page .request-success-button{border-radius:999px;background:#1c5bed;color:#fff}
+.request-page .request-success-button:hover{background:#1648c5}
+@media(max-width:760px){
+  .request-page .request-progress{padding:12px 10px}
+  .request-page .request-progress-item{min-width:0}
+  .request-page .request-progress-item strong{font-size:11px}
+  .request-page .request-modern-number{flex-basis:34px;width:34px;height:34px}
+}
+@media(max-width:380px){
+  .request-page .request-progress-item strong{font-size:10px}
+  .request-page .request-progress-line{min-width:10px;margin:0 4px}
+}
+@media(prefers-reduced-motion:reduce){
+  .request-page .request-progress-item,.request-page .request-progress-item span,.request-page .request-modern-submit button{transition:none}
+}
