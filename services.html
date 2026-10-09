@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLEANO — Каталог услуг</title>
+  <meta name="description" content="Уборка квартир, домов, коммерческих помещений и химчистка мебели в Алматы и Астане.">
   <link rel="icon" href="assets/cleano-favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
   <header class="site-header" data-city="almaty">
@@ -31,68 +33,49 @@
     </div>
   </header>
   <nav class="navigation" aria-label="Основная навигация">
-    <a href="services.html">Каталог услуг</a>
+    <a class="active" href="services.html" aria-current="page">Каталог услуг</a>
     <a href="request.html">Заявка</a>
     <a href="reviews.html">Отзывы</a>
     <a href="contacts.html">Контакты</a>
     <a href="about.html">О компании</a>
   </nav>
-  <main class="main-content">
-    <section class="services-intro">
-      <div class="services-intro-copy">
-        <h1>Услуги CLEANO</h1>
-        <p>Подбираем формат уборки под ваш объект, площадь и задачи. Работаем с квартирами, частными домами, коммерческими помещениями и мягкой мебелью.</p>
+  <main class="main-content catalog-page">
+    <section class="catalog-hero">
+      <div class="catalog-hero-copy">
+        <span class="catalog-eyebrow">CLEANO · КАТАЛОГ УСЛУГ</span>
+        <h1>Подходящая уборка для каждого пространства</h1>
+        <p>От квартиры и частного дома до офиса или химчистки мебели. Расскажите о своей задаче — поможем определить состав работ и обсудить детали.</p>
+        <a class="catalog-button" href="request.html">Подобрать уборку <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="catalog-hero-image" role="img" aria-label="Светлый домашний интерьер">
+        <div class="catalog-hero-caption">Чистота в деталях</div>
       </div>
     </section>
-
-    <section class="catalog-services" aria-label="Каталог услуг">
-      <article class="catalog-service-card">
-        <div class="catalog-service-photo placeholder">Фото</div>
-        <div class="catalog-service-copy">
-          <h2>Уборка квартир</h2>
-          <h3>Чистота и порядок в каждой комнате</h3>
-          <p>Профессиональная уборка квартир с вниманием к деталям. Подходит для разовой уборки и регулярного поддержания чистоты.</p>
-          <button class="catalog-service-button" type="button" data-service-modal="apartments">Подробнее об услуге →</button>
-        </div>
+    <section class="catalog-overview">
+      <div><strong>Четыре направления уборки</strong><p>Выберите услугу, чтобы посмотреть подробности, состав работ и факторы стоимости.</p></div>
+      <a class="catalog-button" href="request.html">Оставить заявку <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="catalog-services-new" aria-label="Каталог услуг">
+      <article class="catalog-service-new">
+        <div class="catalog-service-new-image apartments" role="img" aria-label="Аккуратная гостиная"></div>
+        <div class="catalog-service-new-copy"><span class="catalog-service-index">01 / ЖИЛЫЕ ПРОСТРАНСТВА</span><h2>Уборка квартир</h2><h3>Чистота и порядок в каждой комнате</h3><p>Уборка жилых комнат, кухни и санузла с учётом площади, состояния помещения и ваших пожеланий. Подходит для разового заказа и регулярного поддержания чистоты.</p><button class="catalog-button" type="button" data-service-modal="apartments">Подробнее об услуге <span aria-hidden="true">→</span></button></div>
       </article>
-
-      <article class="catalog-service-card reverse">
-        <div class="catalog-service-copy">
-          <h2>Уборка частных домов</h2>
-          <h3>Чистый дом без лишних забот</h3>
-          <p>Убираем частные дома и коттеджи независимо от площади и планировки. Объём работ согласовываем перед началом уборки.</p>
-          <button class="catalog-service-button" type="button" data-service-modal="houses">Подробнее об услуге →</button>
-        </div>
-        <div class="catalog-service-photo placeholder">Фото</div>
+      <article class="catalog-service-new reverse">
+        <div class="catalog-service-new-image houses" role="img" aria-label="Светлый интерьер частного дома"></div>
+        <div class="catalog-service-new-copy"><span class="catalog-service-index">02 / ЧАСТНЫЕ ОБЪЕКТЫ</span><h2>Уборка частных домов</h2><h3>Чистый дом без лишних забот</h3><p>Подберём объём работ для дома или коттеджа с учётом площади, этажности, количества комнат и дополнительных зон.</p><button class="catalog-button" type="button" data-service-modal="houses">Подробнее об услуге <span aria-hidden="true">→</span></button></div>
       </article>
-
-      <article class="catalog-service-card">
-        <div class="catalog-service-photo placeholder">Фото</div>
-        <div class="catalog-service-copy">
-          <h2>Уборка коммерческих помещений</h2>
-          <h3>Порядок, который работает на ваш бизнес</h3>
-          <p>Поддерживаем чистоту в офисах, кафе, ресторанах, магазинах и других коммерческих помещениях.</p>
-          <button class="catalog-service-button" type="button" data-service-modal="commercial">Подробнее об услуге →</button>
-        </div>
+      <article class="catalog-service-new">
+        <div class="catalog-service-new-image commercial" role="img" aria-label="Современное офисное пространство"></div>
+        <div class="catalog-service-new-copy"><span class="catalog-service-index">03 / ДЛЯ БИЗНЕСА</span><h2>Коммерческие помещения</h2><h3>Порядок, который работает на ваш бизнес</h3><p>Уборка офисов, кафе, ресторанов, магазинов и других коммерческих пространств. График и состав работ обсуждаются с учётом режима работы объекта.</p><button class="catalog-button" type="button" data-service-modal="commercial">Подробнее об услуге <span aria-hidden="true">→</span></button></div>
       </article>
-
-      <article class="catalog-service-card reverse">
-        <div class="catalog-service-copy">
-          <h2>Химчистка мягкой мебели</h2>
-          <h3>Возвращаем мебели свежий вид</h3>
-          <p>Профессиональная химчистка диванов, кресел и другой мягкой мебели с выездом специалиста на объект.</p>
-          <button class="catalog-service-button" type="button" data-service-modal="furniture">Подробнее об услуге →</button>
-        </div>
-        <div class="catalog-service-photo placeholder">Фото</div>
+      <article class="catalog-service-new reverse">
+        <div class="catalog-service-new-image furniture" role="img" aria-label="Мягкий диван в светлой гостиной"></div>
+        <div class="catalog-service-new-copy"><span class="catalog-service-index">04 / УХОД ЗА МЕБЕЛЬЮ</span><h2>Химчистка мягкой мебели</h2><h3>Свежий вид любимой мебели</h3><p>Выездная очистка диванов, кресел и другой мягкой мебели. Способ обработки подбирается с учётом материала обивки и состояния загрязнений.</p><button class="catalog-button" type="button" data-service-modal="furniture">Подробнее об услуге <span aria-hidden="true">→</span></button></div>
       </article>
     </section>
-
-    <section class="catalog-cta" aria-label="Заказ уборки">
-      <div class="catalog-cta-content">
-        <h2>Готовы заказать уборку?</h2>
-        <p>Оставьте заявку, укажите объект и желаемое время. Мы свяжемся с вами, уточним детали и рассчитаем стоимость.</p>
-        <a class="catalog-cta-button" href="request.html">Оставить заявку →</a>
-      </div>
+    <section class="catalog-bottom-cta">
+      <div><span class="catalog-eyebrow">ВАША ЗАДАЧА · НАШ СЛЕДУЮЩИЙ ШАГ</span><h2>Не уверены, какая услуга подойдёт?</h2><p>Оставьте заявку и расскажите об объекте. Поможем сориентироваться по составу работ, срокам и стоимости.</p></div>
+      <a class="catalog-button" href="request.html">Обсудить задачу <span aria-hidden="true">→</span></a>
     </section>
 
     <div class="service-modal" id="service-modal" aria-hidden="true">
