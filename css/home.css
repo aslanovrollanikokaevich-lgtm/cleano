@@ -134,3 +134,57 @@
 @media(prefers-reduced-motion:reduce){
   .home-hero .home-text-link{transition:none}
 }
+
+
+/* Service cards — consistent imagery, clearer hierarchy and restrained blue cues */
+.home-service-grid{gap:16px}
+.home-service-card{
+  grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
+  min-height:242px;
+  border-color:#e5e1d9;
+  border-radius:17px;
+  background:var(--cleano-surface);
+  box-shadow:0 4px 15px rgba(42,37,29,.025);
+}
+.home-service-image{
+  min-height:242px;
+  background-color:#e6e0d6;
+  background-position:center;
+}
+.home-service-apartment{background-position:52% center}
+.home-service-house{background-position:55% center}
+.home-service-commercial{background-position:48% center}
+.home-service-furniture{background-position:54% center}
+.home-service-card-copy{padding:clamp(17px,2vw,25px)}
+.home-service-card-copy>span{margin-bottom:13px;color:#858176;font-size:9px;letter-spacing:.12em}
+.home-service-card h3{font-size:clamp(18px,1.8vw,22px);line-height:1.18}
+.home-service-card p{font-size:12px;line-height:1.75}
+.home-service-card b{gap:8px;color:var(--cleano-blue);font-size:12px;font-weight:700}
+.home-service-card b span{display:inline-block;transition:transform .18s ease}
+.home-service-card:hover b span{transform:translate(2px,-2px)}
+.home-service-card:focus-visible{outline:3px solid rgba(28,91,237,.3);outline-offset:3px}
+@media(max-width:900px){
+  .home-service-card{grid-template-columns:minmax(0,1fr);min-height:0}
+  .home-service-image{min-height:190px}
+  .home-service-card-copy{min-height:208px;padding:22px}
+}
+@media(max-width:650px){
+  .home-service-grid{gap:13px}
+  .home-service-card{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:208px}
+  .home-service-image{min-height:208px}
+  .home-service-card-copy{min-height:208px;padding:17px 16px}
+  .home-service-card-copy>span{margin-bottom:9px;font-size:8px;letter-spacing:.1em}
+  .home-service-card h3{font-size:19px}
+  .home-service-card p{font-size:11px;line-height:1.65}
+  .home-service-card b{font-size:11px}
+}
+@media(max-width:390px){
+  .home-service-card{grid-template-columns:minmax(0,1fr);min-height:0}
+  .home-service-image{min-height:190px}
+  .home-service-card-copy{min-height:185px;padding:20px}
+  .home-service-card-copy>span{font-size:9px}
+  .home-service-card p{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-service-card b span{transition:none}
+}
