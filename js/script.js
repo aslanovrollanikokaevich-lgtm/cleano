@@ -4,6 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!cityPicker || !languagePicker) return;
   const cityButton = document.querySelector('.city-button');
   const cityMenu = document.querySelector('.city-menu');
+  const languageButton = document.querySelector('.language-button');
+  const languageMenu = document.querySelector('.language-menu');
+  const safeGet = (key) => { try { return localStorage.getItem(key); } catch (_) { return null; } };
+  const safeSet = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
+  const restoreChoice = (button, menu, attribute, storageKey) => {
+    const saved = safeGet(storageKey);
+    const option = saved && menu.querySelector(`[${attribute}="${saved}"]`);
+    if (option) button.textContent = option.textContent;
+  };
+  restoreChoice(cityButton, cityMenu, 'data-city', 'cleano-city');
+  restoreChoice(languageButton, languageMenu, 'data-language', 'cleano-language');
+
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.navigation a').forEach((link) => {
+    const targetFile = link.getAttribute('href').split('#')[0];
+    if (targetFile === currentFile || (!currentFile && targetFile === 'index.html')) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
+  });
 
   const closeCityMenu = () => {
     cityMenu.classList.remove('is-open');
@@ -29,11 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const option = event.target.closest('[data-city]');
     if (!option) return;
     cityButton.textContent = option.dataset.city;
+    safeSet('cleano-city', option.dataset.city);
+    cityMenu.querySelectorAll('[role="option"]').forEach((item) => item.setAttribute('aria-selected', String(item === option)));
     closeCityMenu();
   });
-
-  const languageButton = document.querySelector('.language-button');
-  const languageMenu = document.querySelector('.language-menu');
 
   const closeLanguageMenu = () => {
     languageMenu.classList.remove('is-open');
@@ -57,12 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const option = event.target.closest('[data-language]');
     if (!option) return;
     languageButton.textContent = option.dataset.language;
+    safeSet('cleano-language', option.dataset.language);
+    languageMenu.querySelectorAll('[role="option"]').forEach((item) => item.setAttribute('aria-selected', String(item === option)));
     closeLanguageMenu();
   });
 
   document.addEventListener('click', (event) => {
     if (!cityPicker.contains(event.target)) closeCityMenu();
     if (!languagePicker.contains(event.target)) closeLanguageMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    const cityWasOpen = cityMenu.classList.contains('is-open');
+    const languageWasOpen = languageMenu.classList.contains('is-open');
+    closeCityMenu();
+    closeLanguageMenu();
+    if (cityWasOpen) cityButton.focus();
+    else if (languageWasOpen) languageButton.focus();
   });
 
   const propertyType = document.querySelector('#property-type');
