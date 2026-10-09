@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLEANO — Контакты</title>
+  <meta name="description" content="Свяжитесь с CLEANO по вопросам уборки квартир, домов и коммерческих помещений в Алматы и Астане.">
   <link rel="icon" href="assets/cleano-favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacts.css">
 </head>
 <body>
   <header class="site-header" data-city="almaty">
@@ -34,16 +36,75 @@
     <a href="services.html">Каталог услуг</a>
     <a href="request.html">Заявка</a>
     <a href="reviews.html">Отзывы</a>
-    <a href="contacts.html">Контакты</a>
+    <a class="active" href="contacts.html" aria-current="page">Контакты</a>
     <a href="about.html">О компании</a>
   </nav>
-  <main class="main-content">
-    <section class="hero">
-      <div>
-        <h1>Контакты</h1>
-        <p>Здесь будут телефоны, мессенджеры, адреса и другая контактная информация CLEANO.</p>
+  <main class="main-content contacts-page">
+    <section class="contacts-hero">
+      <div class="contacts-hero-copy">
+        <span class="contacts-eyebrow">CLEANO · ВСЕГДА НА СВЯЗИ</span>
+        <h1>Давайте обсудим вашу уборку</h1>
+        <p>Расскажите, что нужно убрать, где находится объект и какой результат вы хотите получить. Мы уточним детали и поможем подобрать подходящий формат услуги.</p>
+        <a class="contacts-button" href="request.html">Оставить заявку <span aria-hidden="true">→</span></a>
+        <span class="contacts-hero-note">Работаем с частными и коммерческими объектами</span>
       </div>
-      <div class="placeholder">Контактные данные — следующий этап</div>
+      <div class="contacts-hero-visual" role="img" aria-label="Светлая уютная гостиная">
+        <div class="contacts-visual-caption"><span class="contacts-visual-dot"></span> Чистота начинается с диалога</div>
+      </div>
+    </section>
+
+    <section class="contacts-city-section">
+      <div class="contacts-section-heading">
+        <span class="contacts-eyebrow">ГЕОГРАФИЯ РАБОТЫ</span>
+        <h2>Два города. Один подход к качеству.</h2>
+        <p>Выберите город, в котором нужна уборка, и оставьте заявку — детали по объекту можно будет уточнить при согласовании.</p>
+      </div>
+      <div class="contacts-city-grid">
+        <article class="contacts-city-card">
+          <div class="contacts-city-image contacts-city-almaty" role="img" aria-label="Горный пейзаж Алматы"><span>01 / ГОРОД</span></div>
+          <div class="contacts-city-content">
+            <span class="contacts-city-tag">ЮЖНАЯ СТОЛИЦА</span>
+            <h3>Алматы</h3>
+            <p>Уборка квартир, частных домов и коммерческих помещений.</p>
+            <a href="request.html" class="contacts-text-link">Обсудить уборку в Алматы <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="contacts-city-card">
+          <div class="contacts-city-image contacts-city-astana" role="img" aria-label="Современная архитектура Астаны"><span>02 / ГОРОД</span></div>
+          <div class="contacts-city-content">
+            <span class="contacts-city-tag">СТОЛИЦА</span>
+            <h3>Астана</h3>
+            <p>Уборка жилых объектов, офисов и других коммерческих пространств.</p>
+            <a href="request.html" class="contacts-text-link">Обсудить уборку в Астане <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contacts-connect">
+      <div class="contacts-connect-copy">
+        <span class="contacts-eyebrow">КАК СВЯЗАТЬСЯ</span>
+        <h2>Начнём с вашей задачи</h2>
+        <p>Чтобы не заставлять вас искать нужный контакт, мы собрали простой путь: отправьте заявку с основными деталями, а способ связи и время можно согласовать отдельно.</p>
+        <div class="contacts-contact-row"><span class="contacts-contact-icon" aria-hidden="true">01</span><div><strong>Опишите объект</strong><p>Квартира, дом, офис или другое помещение.</p></div></div>
+        <div class="contacts-contact-row"><span class="contacts-contact-icon" aria-hidden="true">02</span><div><strong>Укажите город и пожелания</strong><p>Так будет проще понять объём работ и подготовить ответ.</p></div></div>
+        <div class="contacts-contact-row"><span class="contacts-contact-icon" aria-hidden="true">03</span><div><strong>Согласуйте детали</strong><p>Уточните удобное время и оставшиеся вопросы.</p></div></div>
+      </div>
+      <aside class="contacts-request-card">
+        <span class="contacts-card-kicker">СЛЕДУЮЩИЙ ШАГ</span>
+        <div class="contacts-card-icon" aria-hidden="true">↗</div>
+        <h3>Оставьте заявку онлайн</h3>
+        <p>Заполните короткую форму — она поможет собрать основную информацию об уборке.</p>
+        <a class="contacts-button contacts-button-dark" href="request.html">Перейти к заявке <span aria-hidden="true">→</span></a>
+        <span class="contacts-card-footnote">Телефоны, мессенджеры и адреса будут добавлены после подтверждения официальных контактов.</span>
+      </aside>
+    </section>
+
+    <section class="contacts-bottom-cta">
+      <span class="contacts-eyebrow">CLEANO · АЛМАТЫ И АСТАНА</span>
+      <h2>Чистое пространство начинается с простого шага</h2>
+      <p>Расскажите нам о задаче — вместе определим, какой формат уборки подойдёт именно вам.</p>
+      <a class="contacts-button contacts-button-light" href="request.html">Оставить заявку <span aria-hidden="true">→</span></a>
     </section>
   </main>
   <footer class="site-footer">
@@ -53,16 +114,14 @@
           <a class="footer-logo" href="index.html" aria-label="CLEANO">CLEANO</a>
           <p>Профессиональная уборка квартир, домов и коммерческих помещений в Алматы и Астане.</p>
         </div>
-
         <div class="footer-column">
           <h2>Навигация</h2>
           <a href="index.html">Главная</a>
           <a href="services.html">Каталог услуг</a>
           <a href="about.html">О компании</a>
           <a href="reviews.html">Отзывы</a>
-          <a href="contacts.html">Контакты</a>
+          <a href="contacts.html" aria-current="page">Контакты</a>
         </div>
-
         <div class="footer-column">
           <h2>Услуги</h2>
           <a href="services.html">Уборка квартир</a>
@@ -70,7 +129,6 @@
           <a href="services.html">Коммерческие помещения</a>
           <a href="services.html">Химчистка мягкой мебели</a>
         </div>
-
         <div class="footer-column footer-contact">
           <h2>Связаться</h2>
           <span>Алматы и Астана</span>
@@ -78,7 +136,6 @@
           <a href="contacts.html">Все контакты →</a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <span>© 2026 CLEANO. Все права защищены.</span>
         <div class="footer-legal">
