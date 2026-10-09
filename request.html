@@ -7,6 +7,7 @@
   <meta name="description" content="Оставьте заявку на профессиональную уборку в Алматы и Астане.">
   <link rel="icon" href="assets/cleano-favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/request.css">
 </head>
 <body>
   <header class="site-header" data-city="almaty">
@@ -41,13 +42,15 @@
   <main class="main-content">
     <section class="request-intro">
       <div class="request-intro-copy">
-        <h1>Оставить заявку</h1>
-        <p>Предоставьте основные сведения об объекте и желаемых условиях обслуживания. Менеджер CLEANO свяжется с вами для уточнения деталей, расчёта стоимости и согласования времени.</p>
+        <span class="request-eyebrow">CLEANO · ЗАЯВКА НА УБОРКУ</span>
+        <h1>Расскажите, что нужно привести в порядок</h1>
+        <p>Ответьте на несколько коротких вопросов — так мы сможем понять задачу, уточнить детали и подготовить расчёт для вашего объекта.</p>
+        <div class="request-intro-tags"><span>Для дома</span><span>Для бизнеса</span><span>Алматы и Астана</span></div>
       </div>
     </section>
 
     <section class="request-card request-card-modern">
-      <form class="request-form request-form-modern" action="#" method="post">
+      <form class="request-form request-form-modern" action="#" method="post" novalidate>
         <nav class="request-progress" aria-label="Этапы заявки">
           <button class="request-progress-item is-active" type="button" data-scroll-target="request-step-1"><span>01</span><strong>Контакты</strong></button>
           <div class="request-progress-line"></div>
@@ -183,13 +186,14 @@
           </div>
           <button type="submit">Отправить заявку <span>→</span></button>
         </div>
-        <p class="request-modern-privacy">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
+        <label class="request-consent"><input type="checkbox" name="privacy_consent" required><span>Я согласен(на) на обработку персональных данных для связи по этой заявке.</span></label>
+        <p class="request-modern-privacy">Форма пока работает в демонстрационном режиме: данные не отправляются менеджеру. Подключение отправки в CRM или на рабочую почту — следующий этап.</p>
 
         <section class="request-success" id="request-success" aria-hidden="true">
           <div class="request-success-icon">✓</div>
-          <h2>Заявка принята</h2>
-          <p>Мы получили вашу заявку. Менеджер CLEANO свяжется с вами, чтобы уточнить детали, рассчитать стоимость и согласовать удобное время обслуживания.</p>
-          <strong>Ожидайте звонка в ближайшее время.</strong>
+          <h2>Форма заполнена</h2>
+          <p>Вы успешно прошли проверку полей. Сейчас сайт ещё не передаёт заявки менеджеру, поэтому ваши данные не были отправлены.</p>
+          <strong>Следующий этап — подключить форму к CRM или рабочей почте.</strong>
           <a class="request-success-button" href="index.html">Вернуться на главную</a>
         </section>
       </form>
