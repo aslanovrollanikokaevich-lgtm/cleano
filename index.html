@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLEANO — профессиональная уборка</title>
-  <meta name="description" content="Профессиональная уборка квартир, домов и коммерческих помещений в Алматы и Астане.">
+  <title>CLEANO — уборка квартир, домов и коммерческих помещений</title>
+  <meta name="description" content="Уборка квартир, частных домов и коммерческих помещений в Алматы и Астане. Подберите формат уборки и оставьте заявку в CLEANO.">
   <link rel="icon" href="assets/cleano-favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
   <header class="site-header" data-city="almaty">
@@ -31,7 +32,6 @@
       </div>
     </div>
   </header>
-
   <nav class="navigation" aria-label="Основная навигация">
     <a href="services.html">Каталог услуг</a>
     <a href="request.html">Заявка</a>
@@ -39,121 +39,77 @@
     <a href="contacts.html">Контакты</a>
     <a href="about.html">О компании</a>
   </nav>
-
-  <main class="main-content">
-    <section class="homepage-hero" aria-label="О компании CLEANO">
-      <div class="homepage-hero-copy">
-        <h1>Профессиональная уборка без лишних забот</h1>
-        <p>CLEANO помогает поддерживать чистоту там, где вы живёте и работаете. Убираем квартиры, частные дома, офисы, кафе и другие коммерческие помещения в Алматы и Астане.</p>
-        <p>Берём на себя всё необходимое — от повседневной уборки до химчистки мягкой мебели с выездом специалиста. Вы выбираете удобное время, а мы занимаемся остальным.</p>
+  <main class="main-content home-page">
+    <section class="home-hero">
+      <div class="home-hero-copy">
+        <span class="home-eyebrow">CLEANO · АЛМАТЫ И АСТАНА</span>
+        <h1>Чистота, в которую приятно возвращаться</h1>
+        <p>Уборка квартир, частных домов и коммерческих пространств. Подберём формат под ваш объект и задачи — без лишней суеты.</p>
+        <div class="home-hero-actions">
+          <a class="home-button" href="request.html">Рассчитать уборку <span aria-hidden="true">→</span></a>
+          <a class="home-text-link" href="services.html">Посмотреть услуги <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="home-hero-meta"><span class="home-meta-mark"></span> Для дома и бизнеса · В двух городах</div>
+      </div>
+      <div class="home-hero-image" role="img" aria-label="Светлая, аккуратная гостиная">
+        <div class="home-image-caption"><span>01</span><span>Пространство для жизни</span></div>
       </div>
     </section>
 
-    <section class="service-tiles" aria-label="Направления уборки">
-      <article class="service-tile">
-        <div class="service-photo placeholder">Фото</div>
-        <div class="service-copy">
-          <h2>Уборка квартир</h2>
-          <h3>Чистота и порядок в каждой комнате</h3>
-          <p>Профессиональная уборка квартир с вниманием к деталям. Приведём в порядок жилые комнаты, кухню, санузел и основные поверхности.</p>
-          <p>Подходит как для разовой уборки, так и для регулярного поддержания чистоты. Вы отдыхаете — мы занимаемся уборкой.</p>
-          <a class="service-button" href="services.html">Подробнее →</a>
-        </div>
-      </article>
-
-      <article class="service-tile reverse">
-        <div class="service-copy">
-          <h2>Уборка частных домов</h2>
-          <h3>Чистый дом без лишних забот</h3>
-          <p>Убираем частные дома и коттеджи независимо от площади и планировки. Работаем с жилыми комнатами, кухнями, санузлами и другими помещениями.</p>
-          <p>Перед началом работы учитываем особенности вашего дома и согласовываем необходимый объём уборки.</p>
-          <a class="service-button" href="services.html">Подробнее →</a>
-        </div>
-        <div class="service-photo placeholder">Фото</div>
-      </article>
-
-      <article class="service-tile">
-        <div class="service-photo placeholder">Фото</div>
-        <div class="service-copy">
-          <h2>Уборка коммерческих помещений</h2>
-          <h3>Порядок, который работает на ваш бизнес</h3>
-          <p>Поддерживаем чистоту в офисах, кафе, ресторанах, магазинах и других коммерческих помещениях.</p>
-          <p>Можем организовать как разовую уборку, так и регулярное обслуживание. Объём работ и график подбираются под особенности вашего помещения и рабочего процесса.</p>
-          <a class="service-button" href="services.html">Подробнее →</a>
-        </div>
-      </article>
-
-      <article class="service-tile reverse">
-        <div class="service-copy">
-          <h2>Химчистка мягкой мебели</h2>
-          <h3>Возвращаем мебели свежий вид</h3>
-          <p>Профессиональная химчистка диванов, кресел и другой мягкой мебели с выездом специалиста на объект.</p>
-          <p>Удаляем загрязнения и освежаем ткань, уделяя внимание материалам и особенностям каждой вещи. Вам не нужно никуда везти мебель — специалист приезжает непосредственно к вам.</p>
-          <a class="service-button" href="services.html">Подробнее →</a>
-        </div>
-        <div class="service-photo placeholder">Фото</div>
-      </article>
-    </section>
-
-    <section class="advantages-section" aria-labelledby="advantages-title">
-      <div class="advantages-card">
-        <div class="advantages-heading">
-          <h2 id="advantages-title">Почему выбирают CLEANO</h2>
-        </div>
-        <div class="advantages-grid">
-          <article class="advantage-item">
-            <h3>Профессиональный подход</h3>
-            <p>Работаем аккуратно и внимательно к деталям — от подготовки до финальной проверки результата.</p>
-          </article>
-          <article class="advantage-item">
-            <h3>Удобно для вас</h3>
-            <p>Вы выбираете подходящее время и формат уборки, а мы берём организацию работы на себя.</p>
-          </article>
-          <article class="advantage-item">
-            <h3>Для дома и бизнеса</h3>
-            <p>Убираем квартиры, частные дома, офисы, кафе, рестораны и другие коммерческие помещения.</p>
-          </article>
-          <article class="advantage-item">
-            <h3>Алматы и Астана</h3>
-            <p>Работаем в двух городах и подбираем формат уборки под конкретный объект.</p>
-          </article>
-        </div>
+    <section class="home-services-section">
+      <div class="home-section-heading">
+        <div><span class="home-eyebrow">ЧТО МЫ ДЕЛАЕМ</span><h2>Уборка под вашу задачу</h2></div>
+        <a class="home-text-link" href="services.html">Все услуги <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="home-service-grid">
+        <a class="home-service-card" href="services.html">
+          <div class="home-service-image home-service-apartment" role="img" aria-label="Светлая гостиная"></div>
+          <div class="home-service-card-copy"><span>01 / ЖИЛЫЕ ПРОСТРАНСТВА</span><h3>Уборка квартир</h3><p>Порядок на кухне, в комнатах и санузле — с вниманием к деталям.</p><b>Подробнее <span aria-hidden="true">↗</span></b></div>
+        </a>
+        <a class="home-service-card" href="services.html">
+          <div class="home-service-image home-service-house" role="img" aria-label="Интерьер частного дома"></div>
+          <div class="home-service-card-copy"><span>02 / ЧАСТНЫЕ ОБЪЕКТЫ</span><h3>Уборка домов</h3><p>Подберём объём работ с учётом площади и особенностей дома.</p><b>Подробнее <span aria-hidden="true">↗</span></b></div>
+        </a>
+        <a class="home-service-card" href="services.html">
+          <div class="home-service-image home-service-commercial" role="img" aria-label="Современное офисное пространство"></div>
+          <div class="home-service-card-copy"><span>03 / ДЛЯ БИЗНЕСА</span><h3>Коммерческие помещения</h3><p>Офисы, кафе, рестораны и другие рабочие пространства.</p><b>Подробнее <span aria-hidden="true">↗</span></b></div>
+        </a>
+        <a class="home-service-card" href="services.html">
+          <div class="home-service-image home-service-furniture" role="img" aria-label="Мягкая мебель в гостиной"></div>
+          <div class="home-service-card-copy"><span>04 / УХОД ЗА МЕБЕЛЬЮ</span><h3>Химчистка мебели</h3><p>Выездная очистка диванов, кресел и другой мягкой мебели.</p><b>Подробнее <span aria-hidden="true">↗</span></b></div>
+        </a>
       </div>
     </section>
 
-    <section class="works-reviews-section" aria-labelledby="works-reviews-title">
-      <div class="works-reviews-card">
-        <div class="works-reviews-heading">
-          <h2 id="works-reviews-title">Наши работы и отзывы</h2>
-          <p>Посмотрите примеры работ и узнайте, что говорят о CLEANO наши клиенты.</p>
+    <section class="home-approach">
+      <div class="home-approach-image" role="img" aria-label="Детали аккуратного домашнего интерьера"></div>
+      <div class="home-approach-copy">
+        <span class="home-eyebrow">ПОНЯТНЫЙ ПРОЦЕСС</span>
+        <h2>Вы задаёте направление. Мы помогаем с остальным.</h2>
+        <p>У каждой уборки своя задача. Поэтому сначала уточняем детали, согласовываем состав работ и только потом переходим к организации.</p>
+        <div class="home-steps">
+          <div><span>01</span><p><strong>Расскажите о задаче</strong><small>Тип помещения, площадь и пожелания.</small></p></div>
+          <div><span>02</span><p><strong>Согласуем детали</strong><small>Объём уборки, время и дополнительные работы.</small></p></div>
+          <div><span>03</span><p><strong>Подготовим план</strong><small>Подберём формат под ваш объект.</small></p></div>
         </div>
-
-        <div class="work-gallery" aria-label="Примеры работ">
-          <div class="work-photo placeholder">Фото работы</div>
-          <div class="work-photo placeholder">Фото работы</div>
-          <div class="work-photo placeholder">Фото работы</div>
-        </div>
-
-        <div class="reviews-grid">
-          <article class="review-card">
-            <div class="review-rating" aria-label="5 из 5">★★★★★</div>
-            <p>«Заказывали уборку квартиры после ремонта. Ребята приехали вовремя, всё аккуратно убрали, особенно порадовало, что не пришлось отдельно объяснять каждый угол. После них квартира реально преобразилась.»</p>
-            <div class="review-author">Анна — Алматы</div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-rating" aria-label="5 из 5">★★★★★</div>
-            <p>«Брали регулярную уборку офиса. Для нас главное было, чтобы всё делалось без лишних разговоров и не мешало работе. Пока всё устраивает: приходят по графику, помещение после уборки заметно свежее.»</p>
-            <div class="review-author">Дмитрий — Алматы</div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-rating" aria-label="5 из 5">★★★★★</div>
-            <p>«Заказывала химчистку дивана. Сначала сомневалась, потому что пятно было старое, но результат оказался лучше, чем ожидала. Специалист всё объяснил по ткани и аккуратно работал на месте.»</p>
-            <div class="review-author">Марина — Астана</div>
-          </article>
-        </div>
+        <a class="home-button" href="request.html">Обсудить уборку <span aria-hidden="true">→</span></a>
       </div>
+    </section>
+
+    <section class="home-trust-section">
+      <div class="home-trust-heading"><span class="home-eyebrow">CLEANO · ПОДХОД</span><h2>Важен не только результат, но и весь путь к нему</h2></div>
+      <div class="home-trust-grid">
+        <article><span>01</span><h3>Внимание к деталям</h3><p>Уточняем задачу и согласовываем зоны, которые нужно привести в порядок.</p></article>
+        <article><span>02</span><h3>Понятные условия</h3><p>Состав работ и дополнительные пожелания обсуждаются до начала уборки.</p></article>
+        <article><span>03</span><h3>Для разных пространств</h3><p>Работаем с жилыми объектами и коммерческими помещениями.</p></article>
+      </div>
+    </section>
+
+    <section class="home-final-cta">
+      <span class="home-eyebrow">СЛЕДУЮЩИЙ ШАГ</span>
+      <h2>Расскажите, какая чистота нужна именно вам</h2>
+      <p>Оставьте заявку — уточним детали и поможем выбрать подходящий формат уборки.</p>
+      <a class="home-button home-button-light" href="request.html">Оставить заявку <span aria-hidden="true">→</span></a>
     </section>
   </main>
   <footer class="site-footer">
@@ -163,7 +119,6 @@
           <a class="footer-logo" href="index.html" aria-label="CLEANO">CLEANO</a>
           <p>Профессиональная уборка квартир, домов и коммерческих помещений в Алматы и Астане.</p>
         </div>
-
         <div class="footer-column">
           <h2>Навигация</h2>
           <a href="index.html">Главная</a>
@@ -172,7 +127,6 @@
           <a href="reviews.html">Отзывы</a>
           <a href="contacts.html">Контакты</a>
         </div>
-
         <div class="footer-column">
           <h2>Услуги</h2>
           <a href="services.html">Уборка квартир</a>
@@ -180,7 +134,6 @@
           <a href="services.html">Коммерческие помещения</a>
           <a href="services.html">Химчистка мягкой мебели</a>
         </div>
-
         <div class="footer-column footer-contact">
           <h2>Связаться</h2>
           <span>Алматы и Астана</span>
@@ -188,7 +141,6 @@
           <a href="contacts.html">Все контакты →</a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <span>© 2026 CLEANO. Все права защищены.</span>
         <div class="footer-legal">
